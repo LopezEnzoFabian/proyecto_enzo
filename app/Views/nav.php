@@ -1,11 +1,21 @@
   <!--Encabezado-->
   <div class="container-fluid">
     <div class="row">
-      <div class="col border border-primary">LOGO</div>
-      <div class="col border border-danger"">BARRA DE BUSQUEDA</div>
-      <div class="col border border-warning"">INICIO DE SESION</div>
-      <div class="col border border-black"">CARRITO</div>
+
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid"><!--NAV SUPERIOR-->
+            <img src="assets/img/gamershoplogo.png" class="d-block w-20" alt="..."><!--LOGO-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary me-md-2" type="button">INICIAR SESIÓN<!--BOTON INICIO SESION-->
+            </button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
+
+
     <div class="row">
       <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <a class="navbar-brand" href="<?php echo base_url('/'); ?>">Home</a>

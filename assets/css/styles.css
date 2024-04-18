@@ -1,11 +1,81 @@
+
 .d-item {
-    height: 35rem;
-    max-height: 35rem;
+  height: 35rem;
+  max-height: 35rem;
+}
+
+.d-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+
+
+/*CONTACTOS ESTILOS EN ORDEN DESCENDENTE A LA PAG*/
+
+
+.custom-row {
+  height: 200px; /* Modifica la altura del row según tus necesidades */
+  margin: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .form-group {
+    margin-bottom: 15px;
   }
-  
-  .d-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
+}
+
+.form-container {
+  width: 400px;
+  /* Ancho del formulario */
+}
+
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /* Esto hace que el formulario ocupe toda la altura de la ventana */
+}
+
+.map-container {
+  width: 50%;
+  max-width: 600px;
+  /* Ancho máximo del mapa */
+  height: 300px;
+  /* Altura del mapa */
+  margin-top: 20px;
+  /* Espacio entre el mapa y el formulario */
+}
+
+.info-contacto,
+.descripcion-contacto {
+  border: 1px solid #000;
+}
+
+@media (min-width: 768px) {
+
+  .info-contacto,
+  .descripcion-contacto {
+    border-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
   }
+}
+
+@media (max-width: 768px) {
+  .background-fon {
+    height: 200px;
+    /* Altura de la imagen para dispositivos más pequeños */
+  }
+}

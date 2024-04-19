@@ -10,7 +10,7 @@
           <img src="assets/img/setup1.png" class="d-block w-100 d-img" alt="...">
         </div>
         <div class="carousel-item d-item">
-          <img src="assets/img/setup2.png" class="d-block w-100 d-img" alt="...">
+          <img src="assets/img/fondo2.png" class="d-block w-100 d-img" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">

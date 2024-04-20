@@ -13,7 +13,7 @@
         </div>
         <div class="col-12 col-md-7 text-md-start text-center">
             <p class="display-2">
-                <span class="gamerc">Gamer</span><span class="shop">Shop</span>
+                <span class="gamer">Gamer</span><span class="shop">Shop</span>
             </p>
         </div>
     </div>
@@ -76,7 +76,7 @@
                         <img src="assets\img\dueño.png" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
-                        <div class="card-body">
+                        <div class="card-body ">
                             <h5 class="card-title">Rodolfo Correa</h5>
                             <p class="card-text">Hola soy el dueño de <span class="gamer">Gamer</span><span class="shop">Shop</span> deseo que encuentres lo que buscas, o simplemente, create un usuario en nuestra web y suma al carrito de compras lo que vos quieras adquirir.</p>
                             <p class="card-text"><small class="text-body-secondary">Creatividad, experiencia y elegancia</small></p>

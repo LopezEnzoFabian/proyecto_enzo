@@ -25,25 +25,37 @@
 <div class="container">
   <div class="row">
     <div class="col border border-primary">
-      <div class="row border border-danger">MEDIOS DE PAGO</div>
+      <div class="row border border-danger">
+        <div class="col">
+          <div class="row">paga con el medio de pago que quieras</div>
+        </div>
+      </div>
       <div class="row border border-black">
-        <div class="col">img pago1</div>
-        <div class="col">img pago2</div>
-        <div class="col">img pago3</div>
-        <div class="col">img pago4</div>
+        <div class="col">
+          <img src="assets\img\medio_pago\mastercard.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <img src="assets\img\medio_pago\pagofacil.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <img src="assets\img\medio_pago\rapipago.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <img src="assets\img\medio_pago\tarjeta-naranja.png" class="img-fluid">
+        </div>
       </div>
     </div>
-
     <div class="col border border-black">
       <div class="row border borde-warning">MEDIOS DE ENVÍO</div>
       <div class="row border border-black">
-        <div class="col">img envio1</div>
-        <div class="col">img envio2</div>
-        <div class="col">img envio3</div>
-        <div class="col">img envio4</div>
+        <div class="col">
+          <img src="assets\img\medio_envio\andreani.png" class="img-fluid">
+        </div>
+      </div>
+      <div class="col">
+        <img src="assets\img\medio_envio\correo_argentino.png" class="img-fluid">
       </div>
     </div>
-
   </div>
 </div>
 

@@ -1,28 +1,27 @@
   <!--Encabezado-->
-  <div class="container-fluid">
-    <div class="row">
+  <header class="container-fluid bg-dark">
+    <nav class="container navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a href="<?php echo base_url('/'); ?>">
+          <img src="assets/img/gamershoplogo.png" class="d-block w-20 header-logo" alt="Logo del header">
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a class="navbar-brand text-white" href="<?php echo base_url('/'); ?>">Inicio</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url('contacto'); ?>">Contacto</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url('terminosyusos'); ?>">Tèrminos y Usos</a>
+          </ul>
 
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid"><!--NAV SUPERIOR-->
-            <img src="assets/img/gamershoplogo.png" class="d-block w-20" alt="..."><!--LOGO-->
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn btn-primary me-md-2" type="button">INICIAR SESIÓN<!--BOTON INICIO SESION-->
-            </button>
-            </div>
-          </div>
-        </nav>
+          <form class="d-flex" role="search">
+            <button type="button" class="btn btn-outline-light me-2">Iniciar</button>
+            <button type="button" class="btn btn-danger">Registrarse</button>
+          </form>
+        </div>
       </div>
-    </div>
-
-
-    <div class="row">
-      <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-        <a class="navbar-brand" href="<?php echo base_url('/'); ?>">Home</a>
-        <a class="navbar-brand" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
-        <a class="navbar-brand" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
-        <a class="navbar-brand" href="<?php echo base_url('contacto'); ?>">Contacto</a>
-        <a class="navbar-brand" href="<?php echo base_url('terminosyusos'); ?>">Tèrminos y Usos</a>
-      </nav>
-    </div>
-  </div>
+    </nav>
+  </header>

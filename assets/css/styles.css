@@ -34,56 +34,6 @@
 }
 
 
-@media (max-width: 576px) {
-  .form-group {
-    margin-bottom: 15px;
-  }
-}
-
-.form-container {
-  width: 400px;
-  /* Ancho del formulario */
-}
-
-.centered-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  /* Esto hace que el formulario ocupe toda la altura de la ventana */
-}
-
-.map-container {
-  width: 50%;
-  max-width: 600px;
-  /* Ancho máximo del mapa */
-  height: 300px;
-  /* Altura del mapa */
-  margin-top: 20px;
-  /* Espacio entre el mapa y el formulario */
-}
-
-.info-contacto,
-.descripcion-contacto {
-  border: 1px solid #000;
-}
-
-@media (min-width: 768px) {
-
-  .info-contacto,
-  .descripcion-contacto {
-    border-width: 0;
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-  .background-fon {
-    height: 200px;
-    /* Altura de la imagen para dispositivos más pequeños */
-  }
-}
 
 
 
@@ -104,4 +54,49 @@
 }
 
 /**************************QUIENES SOMOS*****************************/
+
+
+/****** FOOTER STYLES*********/
+
+.skills-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  
+  & .skills-slide {
+    white-space: nowrap;
+    animation: 50s slide infinite linear;
+
+    & img {
+      margin-right: 70px;
+      width: 100px;
+    }
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-100%);
+  }
+}
+/****** FOOTER STYLES*********/
+/****** HEADER STYLES*********/
+
+.header-logo {
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+/****** HEADER STYLES*********/
 

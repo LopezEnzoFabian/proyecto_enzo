@@ -42,13 +42,14 @@
       </div>
     </div>
     <!---PIE PAG-->
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-    </ul>
-    <p class="text-center text-body-secondary">&copy; 2024 Company, Inc</p>
+    <div class="row bg-black">
+      <ul class="nav justify-content-center pb-3 mb-3 fuente-texto bg-black">
+        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('/'); ?>">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('contacto'); ?>">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a></li>
+      </ul>
+      <p class="text-center text-white">&copy; 2024 Company, Inc</p>
   </footer>
 </div>

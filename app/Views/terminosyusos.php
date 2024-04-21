@@ -5,9 +5,9 @@
 </div>
 
 
-    <section class="terminos container p-5 border border-black">
+    <section class="terminos container p-3 fuente-textos">
 
-        <p class="display-4 text-center">
+        <p class="display-5 text-center">
             <span class="fw-bold">Términos y Condiciones</span>
         </p>
         <p>
@@ -21,7 +21,7 @@
 
         <h3>Uso del sitio Web</h3>
         <p>
-            El uso del Sitio Web es exclusiva responsabilidad del usuario, quien en todo caso deberá servirse del mismo acorde a las funcionalidades permitidas en el propio sitio y a los usos autorizados en los presentes Términos y Condiciones de Uso, por lo que el usuario se obliga a utilizarlos de modo tal que no atenten contra las normas de uso y convivencia en Internet, las leyes de la República Argentina y la legislación vigente en el país en que el usuario se encuentre al usarlos, las buenas costumbres, la dignidad de la persona y los derechos de terceros. Los usuarios se comprometen a utilizar los servicios o contenidos exclusivamente para su uso personal, y a no realizar ni directa ni indirectamente una explotación comercial de los mismos. Los usuarios no tienen el derecho de colocar hipervínculos de y hacia el Sitio Web, ni el derecho de colocar o utilizar los contenidos del mismo en sitios o páginas propias o de terceros sin autorización previa y por escrito de <span class="gamer">Gmaer</span><span class="shop">Shop</span>. Asimismo, los usuarios no tendrán el derecho de limitar o impedir a cualquier otro usuario el uso del Sitio Web.
+            El uso del Sitio Web es exclusiva responsabilidad del usuario, quien en todo caso deberá servirse del mismo acorde a las funcionalidades permitidas en el propio sitio y a los usos autorizados en los presentes Términos y Condiciones de Uso, por lo que el usuario se obliga a utilizarlos de modo tal que no atenten contra las normas de uso y convivencia en Internet, las leyes de la República Argentina y la legislación vigente en el país en que el usuario se encuentre al usarlos, las buenas costumbres, la dignidad de la persona y los derechos de terceros. Los usuarios se comprometen a utilizar los servicios o contenidos exclusivamente para su uso personal, y a no realizar ni directa ni indirectamente una explotación comercial de los mismos. Los usuarios no tienen el derecho de colocar hipervínculos de y hacia el Sitio Web, ni el derecho de colocar o utilizar los contenidos del mismo en sitios o páginas propias o de terceros sin autorización previa y por escrito de <span class="gamer">Gamer</span><span class="shop">Shop</span>. Asimismo, los usuarios no tendrán el derecho de limitar o impedir a cualquier otro usuario el uso del Sitio Web.
         </p>
 
         <h3>Protección de los datos personales</h3>

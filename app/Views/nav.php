@@ -9,7 +9,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fuente-textos">
             <a class="navbar-brand text-white" href="<?php echo base_url('/'); ?>">Inicio</a>
             <a class="navbar-brand text-white" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
             <a class="navbar-brand text-white" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
@@ -18,8 +18,8 @@
           </ul>
 
           <form class="d-flex" role="search">
-            <button type="button" class="btn btn-outline-light me-2">Iniciar</button>
-            <button type="button" class="btn btn-danger">Registrarse</button>
+            <button type="button" class="btn btn-outline-light me-2 fuente-textos">Iniciar</button>
+            <button type="button" class="btn btn-danger fuente-textos">Registrarse</button>
           </form>
         </div>
       </div>

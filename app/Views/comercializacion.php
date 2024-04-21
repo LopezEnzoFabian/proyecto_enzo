@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row custom-row">
-    <img src="assets\img\contactofondo.png" class="img-fluid">
+    <img src="assets\img\fondogamer4.png" class="img-fluid">
   </div>
 </div>
 
@@ -14,7 +14,6 @@
       <ul class="list-group">
         <li class="list-group-item active list-group-item-secondary text-center breve-descripcion" aria-current="true">¿Cómo comprar?</li>
         <li class="list-group-item">Solo tenés que seleccionar todos los productos que deseas adquirir. Seguidamente, en el carrito de compras, para conocer el costo del envío colocás tu código postal en el recuadro correspondiente, elegís la mensajería de tu preferencia y debajo seleccionas la forma de pago. Luego hacés clic en el botón COMPRAR y podés acceder como cliente (si ya tenés cuenta en Gamer Shop) o crear un cliente nuevo. Por último, completás los pasos brindados por el asistente, hasta confirmar la compra. Se te asignará un número de pedido y se mostrarán los datos del mismo. También enviaremos un mail a tu correo electrónico registrado con los detalles del pedido realizado.</li>
-
       </ul>
     </div>
   </div>
@@ -25,10 +24,8 @@
 <div class="container">
   <div class="row">
     <div class="col border border-primary">
-      <div class="row border border-danger">
-        <div class="col">
-          <div class="row">paga con el medio de pago que quieras</div>
-        </div>
+      <div class="row m-2 text-center borde-warning">
+      <h5>Medios de Pago</h5>
       </div>
       <div class="row border border-black">
         <div class="col">
@@ -46,14 +43,19 @@
       </div>
     </div>
     <div class="col border border-black">
-      <div class="row border borde-warning">MEDIOS DE ENVÍO</div>
+      <div class="row m-2 text-center borde-warning">
+          <h5>Medios de Envíos</h5>
+      </div>
       <div class="row border border-black">
         <div class="col">
           <img src="assets\img\medio_envio\andreani.png" class="img-fluid">
         </div>
-      </div>
-      <div class="col">
-        <img src="assets\img\medio_envio\correo_argentino.png" class="img-fluid">
+        <div class="col">
+          <img src="assets\img\medio_envio\correo_argentino.png" class="img-fluid">
+        </div>
+        <div class="col">
+          <img src="assets\img\medio_envio\oca.png" class="img-fluid">
+        </div>
       </div>
     </div>
   </div>
@@ -68,7 +70,6 @@
 
 <div class="accordion" id="accordionExample">
   <div class="row justify-content-center m-2">
-
     <div class="col-md-8">
       <div class="accordion-item"><!--REALIZAR PEDIDO-->
         <h2 class="accordion-header">
@@ -76,7 +77,7 @@
             <p class="card-text">Realizar un pedido</p>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseOne" class="accordion-collapse collapsed show" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <strong>¿Comò realizar el pedido?</strong>
             <p class="card-text">Solo tenés que seleccionar todos los productos que deseas adquirir. Seguidamente, en el carrito de compras, para conocer el costo del envío colocás tu código postal en el recuadro correspondiente, elegís la mensajería de tu preferencia y debajo seleccionas la forma de pago. Luego hacés clic en el botón COMPRAR y podés acceder como cliente (si ya tenés cuenta en Compra Gamer) o crear un cliente nuevo. Por último, completás los pasos brindados por el asistente, hasta confirmar la compra. Se te asignará un número de pedido y se mostrarán los datos del mismo. También enviaremos un mail a tu correo electrónico registrado con los detalles del pedido realizado.</p>
@@ -85,7 +86,7 @@
       </div>
       <div class="accordion-item"><!--PRECIO-->
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <p class="card-text">Precio</p>
           </button>
         </h2>
@@ -98,7 +99,7 @@
       </div>
       <div class="accordion-item"><!--FORMAS DE PAGO-->
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             <p class="card-text">Formas de Pago</p>
           </button>
         </h2>
@@ -111,7 +112,7 @@
       </div>
       <div class="accordion-item"><!--DEPOSITO TRANSFERENCIA BANCARIA-->
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
             <p class="card-text">Deposito transferencia bancaria</p>
           </button>
         </h2>
@@ -124,7 +125,7 @@
       </div>
       <div class="accordion-item"><!--ENVIOS-->
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
             <p class="card-text">Enviós</p>
           </button>
         </h2>
@@ -137,7 +138,7 @@
       </div>
       <div class="accordion-item"><!--FACTURACION-->
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
             <p class="card-text">Facturación</p>
           </button>
         </h2>

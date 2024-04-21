@@ -16,7 +16,12 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/icon/bootstrap-icons-1.10.4/font/bootstrap-icons.css">
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="assets/js/bootstrap.bundle.js"></script>
+
 </head>
 
 </html>

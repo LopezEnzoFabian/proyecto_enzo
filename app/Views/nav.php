@@ -14,7 +14,7 @@
             <a class="navbar-brand text-white" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
             <a class="navbar-brand text-white" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
             <a class="navbar-brand text-white" href="<?php echo base_url('contacto'); ?>">Contacto</a>
-            <a class="navbar-brand text-white" href="<?php echo base_url('terminosyusos'); ?>">Tèrminos y Usos</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a>
           </ul>
 
           <form class="d-flex" role="search">

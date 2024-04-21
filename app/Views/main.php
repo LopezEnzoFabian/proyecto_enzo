@@ -3,14 +3,17 @@
 <body>
 
   <!--Carrusel deslizante-->
-  <div class="container-fluid">
+  <div class="container mt-1">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active d-item">
-          <img src="assets/img/setup1.png" class="d-block w-100 d-img" alt="...">
+          <img src="assets/img/carruselgamer.png" class="d-block w-100 d-img" alt="...">
         </div>
         <div class="carousel-item d-item">
           <img src="assets/img/fondo2.png" class="d-block w-100 d-img" alt="...">
+        </div>
+        <div class="carousel-item d-item">
+          <img src="assets/img/setup1.png" class="d-block w-100 d-img" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -29,7 +32,7 @@
 
   <!--TITULO NOVEDADES-->
   <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 10px;">
-    <h4 class="fuente-texto">Novedades</h4>
+    <h4 class="fuente-texto mt-2">Novedades</h4>
   </div>
 
   <!--ITEM NOVEDADES-->
@@ -75,7 +78,7 @@
   </div>
   <!--TITULO MAS VENDIDOS-->
   <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 10px;">
-    <h4 class="fuente-texto">Más Vendidos</h4>
+    <h4 class="fuente-texto mt-2">Más Vendidos</h4>
   </div>
 
   <!--ITEM MAS VENDIDOS-->

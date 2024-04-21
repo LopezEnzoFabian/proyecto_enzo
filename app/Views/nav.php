@@ -18,7 +18,7 @@
           </ul>
 
           <form class="d-flex" role="search">
-            <button type="button" class="btn btn-outline-light me-2 fuente-textos">Iniciar</button>
+            <button type="button" class="btn btn-outline-light me-1 fuente-textos">Iniciar Sesión</button>
             <button type="button" class="btn btn-danger fuente-textos">Registrarse</button>
           </form>
         </div>

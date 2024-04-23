@@ -20,7 +20,7 @@
 <div class="container">
 <div class="row justify-content-center m-2">
   <div class="col-md-6  mb-3 mb-md-0">
-    <div class="row text-center fuente-textos">
+    <div class="row text-center fuente-textos titulo-rojo">
       <h5>Inicios</h5>
     </div>
     <div class="row justificar-textos">
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="col-md-6  mb-3 mb-md-0">
-      <div class="row text-center fuente-textos">
+      <div class="row text-center fuente-textos titulo-rojo">
         <h5>Crecimiento</h5>
       </div>
       <div class="row justificar-textos">
@@ -56,7 +56,7 @@
 <div class="container">
   <div class="row justify-content-center m-2">
     <div class="col-md-6 mb-3 mb-md-0">
-      <div class="row text-center fuente-textos">
+      <div class="row text-center fuente-textos titulo-rojo">
         <h5>Nuestro Alcance</h5>
       </div>
       <div class="row justificar-textos">

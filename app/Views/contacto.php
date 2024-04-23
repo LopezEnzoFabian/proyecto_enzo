@@ -4,6 +4,8 @@
     </div>
 </div>
 
+
+
 <div class="col-12 container titulo-contacto text-center">
     <div class="row">
         <div class="col-12 col-md-5 text-center text-md-end">
@@ -11,7 +13,7 @@
         </div>
         <div class="col-12 col-md-7 text-md-start text-center">
             <p class="display-3">
-                <span class="gamer fuente-textos">Gamer</span><span class="shop">Shop</span>
+                <span class="gamer fuente-textos titulo-rojo">Gamer</span><span class="shop">Shop</span><!-- display de bootstraP -->
             </p>
         </div>
     </div>
@@ -40,11 +42,13 @@
         </div>
         <div class="col-12 col-md-6- col-sm-6 descripcion-contacto bg-black text-white p-3 borde-r d-flex align-items-center justify-content-center">
             <p class="fs-6 fst-italic fuente-textos">
-                Para envios a domicilio dentro de la ciudad tenés que contacterte vía <strong>wahtsapp</strong> para coordinar el precio del envío. No dudes en consultarnos en redes sociales o via correo electronico.
+                Para envios a domicilio dentro de la ciudad tenés que contacterte vía <strong class="titulo-rojo">whatsapp</strong> para coordinar el precio del envío. No dudes en consultarnos en redes sociales o via correo electronico.
             </p>
         </div>
     </div>
 </div>
+
+
 
 <div class="row align-items-center m-2">
     <!-- DUEÑO Y MAPA -->
@@ -59,7 +63,7 @@
                     <div class="col-md-8">
                         <div class="card-body fuente-textos">
                             <h5 class="card-title">Rodolfo Correa</h5>
-                            <p class="card-text">Hola soy el dueño de <span class="gamer">Gamer</span><span class="shop">Shop</span> deseo que encuentres lo que buscas, o simplemente, create un usuario en nuestra web y suma al carrito de compras lo que vos quieras adquirir.</p>
+                            <p class="card-text">Hola soy el dueño de <span class="gamer titulo-rojo">Gamer</span><span class="shop">Shop</span> deseo que encuentres lo que buscas, o simplemente, create un usuario en nuestra web y suma al carrito de compras lo que vos quieras adquirir.</p>
                             <p class="card-text"><small class="text-body-secondary">Creatividad, experiencia y elegancia</small></p>
                         </div>
                     </div>

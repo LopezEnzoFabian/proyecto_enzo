@@ -31,8 +31,8 @@
 
 
   <!--TITULO NOVEDADES-->
-  <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 10px;">
-    <h4 class="fuente-texto mt-2">Novedades</h4>
+  <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 15px;">
+    <h4 class="fuente-texto mt-3">Novedades</h4>
   </div>
 
   <!--ITEM NOVEDADES-->
@@ -77,8 +77,8 @@
     </div>
   </div>
   <!--TITULO MAS VENDIDOS-->
-  <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 10px;">
-    <h4 class="fuente-texto mt-2">Más Vendidos</h4>
+  <div class="container" style="border-bottom: 2px solid gray; margin-bottom: 15px;">
+    <h4 class="fuente-texto mt-3">Más Vendidos</h4>
   </div>
 
   <!--ITEM MAS VENDIDOS-->

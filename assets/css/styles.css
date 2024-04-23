@@ -1,26 +1,62 @@
-/*MAIN STYLES */
+/* ESTILOS*/
+/* ENZO FABIÁN LÓPEZ */
+/* PAGINA WEB GAMERSHOP */
+/* EL ORDEN DE LOS ESTILOS ES SEGUN SU ARCHIVO PHP CORRESPONDIENTE: MAIN-NAV-QUIENESSOMOS-COMERCIALIZACION-CONTACTO-TERMINOS Y USOS */
+
+/* ******************************************************NAV ENCABEZADO ************************************************************ */
+.navtext-encabezado {
+  background-color: dark;
+  font-family: "Montserrat", sans-serif !important;
+  color: #ece9e9; /* Color del texto */
+}
+/* NAV ENCABEZADO */
+.navtext-encabezado:hover {
+  color: #990606;
+}
+/*NAV ENCABEZADO BOTONES*/
+.boton-color2 {
+  background-color:rgb(19, 18, 18);/* Cambia este color al que desees */
+  color: #ffffff;/* Color del texto */
+}
+/*NAV ENCABEZADO BOTONES*/
+.boton-color2:hover {
+  background-color: #5a5454; /* Color de fondo cuando se pasa el cursor sobre el botón */
+  color: #fcfbfb;
+}
+
+/****** HEADER STYLES*********/
+
+.header-logo {
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+
+
+
+/* **************************************************************MAIN************************************************************ */
+
+
+/*MAIN STYLES TEXTOS FUENTE*/
 .fuente-textos {
   font-family: "Montserrat", sans-serif !important;
 }
-
-/*MAIN STYLES */
+/*MAIN STYLES BOTONES*/
 .boton-color {
-  background-color: #680404;
-  /* Cambia este color al que desees */
-  color: #ece9e9;
-  /* Color del texto */
-
+  background-color: #680404;/* Cambia este color al que desees */
+  color: #ece9e9;/* Color del texto */
 }
-
+/*MAIN STYLES BOTONES*/
 .boton-color:hover {
-  background-color: #cf5e5e;
-  /* Color de fondo cuando se pasa el cursor sobre el botón */
+  background-color: #cf5e5e; /* Color de fondo cuando se pasa el cursor sobre el botón */
   color: #ece9e9;
 }
 
-
-
-/* AJUSTAR IMAGENES */
+/*MAIN AJUSTAR IMAGENES CARRUSEL*/
 .d-item {
   height: 35rem;
   max-height: 35rem;
@@ -35,7 +71,7 @@
 
 
 
-/****************CONTACTOS**********************/
+/***************************************************************CONTACTOS***********************************************************/
 
 #mensaje {
   resize: none;
@@ -63,7 +99,7 @@
 
 
 
-/***********************TERMINOS Y USOS************************/
+/************************************************************TERMINOS Y USOS****************************************************/
 
 .terminos {
   text-align: justify;
@@ -77,16 +113,25 @@
   font-weight: bold;
 }
 
-/**************************QUIENES SOMOS*****************************/
+/****************************************************************QUIENES SOMOS****************************************************/
 .iconos-comer {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
-  /* Espacio entre la imagen y el texto */
+  margin-right: 10px;/* Espacio entre la imagen y el texto */
 }
 
 
-/****** FOOTER STYLES*********/
+/*************************************************************** FOOTER STYLES****************************************************/
+
+.navtext-colores {
+  background-color: black;
+  font-family: "Montserrat", sans-serif !important;
+  color: #ece9e9;/* Color del texto */
+}
+
+.navtext-colores:hover {
+  color: #990606;
+}
 
 .skills-container {
   height: 100%;
@@ -119,19 +164,29 @@
 
 
 
-/****** HEADER STYLES*********/
 
-.header-logo {
-  width: 70px;
-  height: 70px;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  border-radius: 50%;
-  margin-right: 50px;
-}
 
-/* COMERCIALIZACION */
+/* *******************************************************COMERCIALIZACION******************************************************* */
 
 .justificar-textos{
   text-align: justify;
+}
+
+
+/* ajustar fondo de botones del acordeon y tambien al interactuar */
+.boton-preguntas{ 
+  background-color: rgb(39, 39, 39) !important;
+    color: rgb(247, 247, 247) !important;
+    border: none !important;
+    padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
+    margin: 0; /* Asegura que no haya margen */
+}
+
+.boton-preguntas:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.titulo-rojo{
+  color: #c20808;
 }

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <footer class="py-3 my-4">
+  <footer class="container-fluid py-3 my-4">
     <!---CARUUSEL CON SPONSOR-->
     <div class="container-fluid">
       <div class="row border">
@@ -42,14 +42,22 @@
       </div>
     </div>
     <!---PIE PAG-->
-    <div class="row bg-black">
-      <ul class="nav justify-content-center pb-3 mb-3 fuente-texto bg-black">
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('/'); ?>">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a></li>
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a></li>
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('contacto'); ?>">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a></li>
-      </ul>
-      <p class="text-center text-white">&copy; 2024 Company, Inc</p>
+    <div class="container-fluid">
+      <div class="row bg-black">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('/'); ?>">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a></li>
+          <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a></li>
+          <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('contacto'); ?>">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a></li>
+        </ul>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-auto mb-3">
+            <img src="assets\img\gamershoplogo.png" class="img-fluid" width="100" alt="Logo de la página web">
+          </div>
+        </div>
+        <p class="text-center navtext-colores">&copy; 2024 Company, Inc</p>
+      </div>
+    </div>
   </footer>
 </div>

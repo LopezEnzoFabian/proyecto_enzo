@@ -16,10 +16,9 @@
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('contacto'); ?>">Contacto</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a>
             </ul>
-            <form class="d-flex" role="search">
-              <button type="button" class="btn boton-color2 fuente-textos">Iniciar Sesión</button>
-              <button type="button" class="btn boton-color fuente-textos">Registrarse</button>
-            </form>
+            <div class="d-flex" role="search">
+              <a href="<?php echo base_url('login'); ?>" class="btn boton-color fuente-textos">Iniciar Sesión</a>
+            </div>
           </div>
         </div>
       </nav>

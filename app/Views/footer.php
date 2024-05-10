@@ -8,7 +8,7 @@
           <div class="flex skills">
             <div class="skills-slide">
               <img src="assets\img\carrusel-sponsor\adata.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\amd.jpeg" alt="">
+              <img src="assets\img\carrusel-sponsor\amd.jpg" alt="">
               <img src="assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
               <img src="assets\img\carrusel-sponsor\geforce.jpeg" alt="">
               <img src="assets\img\carrusel-sponsor\geil.jpeg" alt="">
@@ -23,7 +23,7 @@
             </div>
             <div class="skills-slide">
               <img src="assets\img\carrusel-sponsor\adata.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\amd.jpeg" alt="">
+              <img src="assets\img\carrusel-sponsor\amd.jpg" alt="">
               <img src="assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
               <img src="assets\img\carrusel-sponsor\geforce.jpeg" alt="">
               <img src="assets\img\carrusel-sponsor\geil.jpeg" alt="">

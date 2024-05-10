@@ -60,7 +60,7 @@
         <h5>Nuestro Alcance</h5>
       </div>
       <div class="row justificar-textos">
-        <p class="card-text fuente-textos">Al día de hoy somos partners oficiales de más de 20 marcas internacionales. Contamos con un equipo en constante crecimiento, un sitio web con más de 50 categorías de producto a la venta y múltiples puntos de retiro distribuidos a lo largo del país./p>
+        <p class="card-text fuente-textos">Al día de hoy somos partners oficiales de más de 20 marcas internacionales. Contamos con un equipo en constante crecimiento, un sitio web con más de 50 categorías de producto a la venta y múltiples puntos de retiro distribuidos a lo largo del país.</p>
       </div>
     </div>
     <div class="col-md-6">

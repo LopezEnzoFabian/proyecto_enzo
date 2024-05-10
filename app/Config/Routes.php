@@ -14,4 +14,7 @@ $routes->get('contacto', 'Home::contacto');
 $routes->get('quienessomos', 'Home::quienessomos');
 $routes->get('terminosyusos', 'Home::terminosyusos');
 
+$routes->get('login', 'Home::login');
+$routes->get('registro', 'Home::registro');
+
 

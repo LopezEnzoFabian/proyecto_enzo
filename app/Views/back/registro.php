@@ -1,90 +1,90 @@
 <div class="row align-items-center justify-content-center fuente-textos">
-    <div class="col col-6 col-lg-6 mt-3">
-        <div class="row mt-2">
+    <div class="col col-6 col-lg-6 mt-3 border border-4">
+        <div class="row mt-2"><!-- TITULO REGISTRO -->
             <div class="container mb-3 text-center">
-                <p class="fs-3">Registro</p>
+                <h2 class="fs-4 text-center mt-3">Registro</h2>
             </div>
         </div>
         <form class="p-3">
-            <!-- Nombre y Apellido -->
-            <div class="row mb-3">
+            <div class="row mb-3"><!-- NOMBRE Y APELLIDO-->
                 <div class="col-12 col-lg-6">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="">
+                        <label for="nombre">Nombre</label>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="">
+                        <label for="apellido">Apellido</label>
                     </div>
                 </div>
             </div>
-
-            <div class="row mb-3">
+            <div class="row mb-3"><!-- CUIDAD Y LOCALIDAD -->
                 <div class="col-12 col-lg-6">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Cuidad</label>
+                        <input type="text" class="form-control" id="cuidad" placeholder="">
+                        <label for="cuidad">Cuidad</label>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="telefono" placeholder="+54">
+                        <input type="text" class="form-control" id="localidad" placeholder="+54">
+                        <label for="localidad">Localidad</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"><!-- DIRECCION Y CODIGO POSTAL-->
+                <div class="col-12 col-lg-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="direccion" placeholder="">
+                        <label for="direccion">Dirección</label>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="codigopostal" placeholder="">
+                        <label for="codigopostal">Código postal</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3"><!-- EMAIL Y TELEFONO-->
+                <div class="col-12 col-lg-6">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="telefono" placeholder="">
                         <label for="telefono">Teléfono</label>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            <!-- Ciudad telefono -->
-            <div class="row mb-3">
+            <div class="row mb-3"><!-- NOMBRE DE USUARIO Y PASSWORD-->
                 <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="ciudad" class="col-form-label">Ciudad</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Ciudad" id="ciudad">
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="nameusuario" placeholder="">
+                        <label for="nameusuario">Nombre de usuario</label>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="telefono" class="col-form-label">Teléfono</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="+(54)" id="telefono">
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" placeholder="">
+                        <label for="password">Password</label>
                     </div>
                 </div>
             </div>
-            <!-- MAIL -->
-            <div class="row mb-3">
-                <div class="col-12 col-md-2">
-                    <label for="email" class="col-form-label">Email</label>
-                </div>
-                <div class="col-12 col-md-10">
-                    <input type="email" class="form-control" id="email" placeholder="nombre@email.com">
-                </div>
-            </div>
-            <!-- BOTONES Y LINK A LOGIN -->
-            <div class="row mb-3">
+            <div class="row mb-3"><!-- BOTONES Y LINK A LOGIN -->
                 <div class="col">
-                    <button type="submit" class="btn btn-dark mb-3">Enviar</button>
-                    <button type="reset" class="btn btn-danger mb-3">Borrar</button>
+                    <button type="submit" class="btn btn-dark mb-3">Crear</button>
+                    <button type="reset" class="btn btn-danger mb-3">Limpiar</button>
                 </div>
             </div>
+            <div class="row mb-3"><!-- LINK AL LOGIN -->
+                <p>¿Ya tenés cuenta?, hace clik <a href="<?php echo base_url('login'); ?>" data-bs-toggle="tooltip" title="Tooltip">acá</a> y inicia tu sesión.</p>
+            </div>  
         </form>
     </div>
 </div>

@@ -5,12 +5,18 @@
                 <h2 class="fs-4 text-center mt-3">Registro</h2>
             </div>
         </div>
-        <form class="p-3">
+        <?php $validation = \Config\Services::validation(); ?>
+        <form method="post" action="<?php echo base_url('/submit-form') ?>" class="p-3">
             <div class="row mb-3"><!-- NOMBRE Y APELLIDO-->
                 <div class="col-12 col-lg-6">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nombre" placeholder="">
                         <label for="nombre">Nombre</label>
+                        <?php if($validation->getError('nombre')) { ?>
+                            <div class="alert alert-danger mt-2">
+                                <?= $error = $validation->getError('nombre'); ?>
+                            </div>
+                        <?php }?>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">

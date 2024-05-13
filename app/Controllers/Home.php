@@ -45,6 +45,7 @@ class Home extends BaseController
         echo view('footer');
     }
 
+   /*
     public function login()
     {
         echo view('header');
@@ -60,6 +61,7 @@ class Home extends BaseController
         echo view('back/registro');
         echo view('footer');
     }
+    */
 
 
 }

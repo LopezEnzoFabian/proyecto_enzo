@@ -23,10 +23,10 @@
         </div>
         <?php $validation = \Config\Services::validation(); ?>
         <div class="container">
-            <form method="post" action="<?php echo base_url('enviar-form') ?>" class="p-3">
+            <form action="<?php echo base_url('enviar-form') ?>" method="post" class="p-3">
                 <div class="row mb-3"><!-- NOMBRE Y APELLIDO-->
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="nombre" placeholder="">
                             <label for="nombre">Nombre</label>
                             <!-- ERROR -->
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="apellido" placeholder="">
                             <label for="apellido">Apellido</label>
                             <!-- ERROR -->
@@ -52,7 +52,7 @@
                 </div>
                 <div class="row mb-3"><!-- CUIDAD Y LOCALIDAD -->
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="ciudad" placeholder="">
                             <label for="ciudad">Ciudad</label>
                             <!-- ERROR -->
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="localidad" placeholder="">
                             <label for="localidad">Localidad</label>
                             <!-- ERROR -->
@@ -78,7 +78,7 @@
                 </div>
                 <div class="row mb-3"><!-- DIRECCION Y CODIGO POSTAL-->
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="direccion" placeholder="">
                             <label for="direccion">Dirección</label>
                             <!-- ERROR -->
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="codigo_postal" placeholder="">
                             <label for="codigo_postal">Código postal</label>
                             <!-- ERROR -->
@@ -104,7 +104,7 @@
                 </div>
                 <div class="row mb-3"><!-- EMAIL Y TELEFONO-->
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="email" class="form-control" name="email" placeholder="">
                             <label for="email">Email</label>
                             <!-- ERROR -->
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="telefono" placeholder="">
                             <label for="telefono">Teléfono</label>
                             <!-- ERROR -->
@@ -130,7 +130,7 @@
                 </div>
                 <div class="row mb-3"><!-- NOMBRE DE USUARIO Y PASSWORD-->
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="nombre_usuario" placeholder="">
                             <label for="nombre_usuario">Nombre de usuario</label>
                             <!-- ERROR -->
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="form form-floating mb-3">
+                        <div class="form-floating mb-3">
                             <input type="password" class="form-control" name="pass" placeholder="***********">
                             <label for="pass">Password</label>
                             <!-- ERROR -->

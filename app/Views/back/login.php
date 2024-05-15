@@ -1,13 +1,7 @@
 <div class="row align-items-center justify-content-center fuente-textos">
     <div style="position: absolute; top: 5%; z-index: 1;">
-        <!--recuperamos datos con la función Flashdata para mostrarlos-->
-        <?php if (session()->getFlashdata('success')) {
-            echo " <div class='h4 text-center alert alert-info alert-dismissible' style='border-radius: 40px;'>
-                  <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('success') . "
-               </div>";
-        }
-        ?>
-        <?php if (session()->getFlashdata('msg')) {
+        <!--recuperamos datos con la función Flashdata para mostrarlos-->   
+        <?php if (session()->getFlashdata('warning')) {
             echo " <div class='h4 text-center alert alert-danger alert-dismissible' style='border-radius: 40px;'>
                   <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('warning') . "
                </div>";

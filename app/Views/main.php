@@ -1,7 +1,15 @@
 <!-- MAIN/HOME carrusel,novedades,cards mas vendidos y pagina de inicio-->
 
 <body>
-
+  <div style="position: absolute; top: 20%; z-index: 1; left: 50%; transform: translateX(-50%);">
+    <!--recuperamos datos con la función Flashdata para mostrarlos-->
+    <?php if (session()->getFlashdata('success')) {
+      echo " <div class='h4 text-center alert alert-info alert-dismissible' style='border-radius: 40px;  background-color: #1a1a1a; color:#f0f0f0;'>
+                  <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('success') . "
+               </div>";
+    }
+    ?>
+  </div>
   <!--Carrusel deslizante-->
   <div class="container-fluid mt-1">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">

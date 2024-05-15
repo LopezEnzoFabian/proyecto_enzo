@@ -58,12 +58,12 @@ class login_controller extends BaseController {
                     // return redirect()->to('/prueba');//pagina principal
                 } else {
                     //no paso la validaciòn de la password
-                    $session->setFlashdata('msg', 'Password Incorrecta');
+                    $session->setFlashdata('warning', 'Password Incorrecta');
                     return redirect()->to(base_url('login'));
                 }
             } else {
                 //no paso la validaciòn del correo
-                $session->setFlashdata('msg', 'No Existe el Email o es Incorrecto');
+                $session->setFlashdata('warning', 'No Existe el Email o es Incorrecto');
                 return redirect()->to(base_url('login'));
             }
         }

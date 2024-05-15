@@ -17,62 +17,60 @@ class login_controller extends BaseController {
         echo view('footer');
     }
 
-    public function auth(){
-        $session = session();
-        $model = new usuario_model();
+    public function auth()
+        {
+            $session = session(); //el objeto de sesión se asigna a la variable $session
+            $model = new usuario_model(); //instanciamos el modelo
+            //traemos los datos del formulario
+            $email = $this->request->getVar('email');
+            $password = $this->request->getVar('pass');
 
-        /* Ahora traemos los datos del formulario */
-        $email = $this->request->getVar('email');
-        $password = $this->request->getVar('pass');
-
-        // Verificar si los campos están vacíos
-        if (empty($email) || empty($password)) {
-            $session->setFlashdata('msg', 'Por favor, completa todos los campos');
-            return redirect()->to(base_url('login_controller'));
-        }
-
-        $data = $model->where('email', $email)->first();
-        if($data){
-            $pass = $data['pass'];
-            /* Se comprueba si el usuario quiere darse de baja */
-            $ba = $data['baja'];
-            if($ba == 'SI'){
-                $session->setFlashdata('msg', 'Usuario dado de baja');
-                return redirect()->to(base_url('login_controller'));
+            if (empty($email) || empty($password)) {
+                $session->setFlashdata('msg', 'Por favor, completa todos los campos');
+                return redirect()->to(base_url('login'));
             }
-            /* Se verifican los datos ingresados para iniciar, y si cumple la verificación, inicial la sesión */
-            $verify_pass = password_verify($password, $pass);
-            /* password_verify determina los requisitos de configuración de la contraseña */
-            if($verify_pass){
-                $ses_data = [
-                    'id' => $data['id'],
-                    'nombre' => $data['nombre'],
-                    'apellido' => $data['apellido'], 
-                    'usuario' => $data['usuario'],
-                    'email' => $data['email'],
-                    'pass' => $data['pass'],
-                    'perfil_id' => $data['perfil_id'],
-                    'logged_in' => TRUE
-                ];
-                /* Si se cumple la verificación de iniciar la sesión */
-                $session->set($ses_data);
 
-                session()->setFlashdata('success', '¡Bienvenido!');
-                return redirect()->to(base_url('/'));
+            $data = $model->where('email', $email)->first(); //consulta sql 
+            if ($data) {
+                $pass = $data['pass'];
+                $ba = $data['baja'];
+                if ($ba == 'SI') {
+                    $session->setFlashdata('msg', 'usuario dado de baja');
+                    return redirect()->to('login');
+                }
+                //Se verifican los datos ingresados para iniciar, si cumple la verificaciòn inicia la sesion
+                $verify_pass = password_verify($password, $pass);
+                //password_verify determina los requisitos de configuracion de la contraseña
+                if ($verify_pass) {
+                    $ses_data = [
+                        'id_usuario' => $data['id_usuario'],
+                        'nombre' => $data['nombre'],
+                        'apellido' => $data['apellido'],
+                        'email' =>  $data['email'],
+                        'nombre_usuario' => $data['nombre_usuario'],
+                        'id_perfil' => $data['id_perfil'],
+                        'logged_in'  => TRUE
+                    ];
+                    //Si se cumple la verificacion inicia la sesiòn  
+                    $session->set($ses_data);
+                    session()->setFlashdata('success', 'Bienvenido!!');
+                    return redirect()->to(base_url('/'));
+                    // return redirect()->to('/prueba');//pagina principal
+                } else {
+                    //no paso la validaciòn de la password
+                    $session->setFlashdata('msg', 'Password Incorrecta');
+                    return redirect()->to(base_url('login'));
+                }
             } else {
-                /* Si no pasa la validación del password */
-                $session->setFlashdata('msg', 'Contraseña incorrecta');
-                return redirect()->to(base_url('login_controller'));
+                //no paso la validaciòn del correo
+                $session->setFlashdata('msg', 'No Existe el Email o es Incorrecto');
+                return redirect()->to(base_url('login'));
             }
-        } else {
-            $session->setFlashdata('msg', 'No existe el email, o es incorrecto');
-            return redirect()->to(base_url('login_controller'));
         }
-    }
-
-    public function logout(){
-        $session = session();
-        $session->destroy();
-        return redirect()->to(base_url('/'));
-    }
+        public function logout()
+        {
+            $session = session();
+            $session->destroy();
+            return redirect()->to(base_url('/'));
+        }
 }

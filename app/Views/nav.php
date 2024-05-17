@@ -35,7 +35,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Mis compras</a></li>
                 <li><a class="dropdown-item" href="#">Carrito</a></li>
-                <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerra sesión</a></li>
+                <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerrar sesión</a></li>
               </ul>
             </div>
           </div>

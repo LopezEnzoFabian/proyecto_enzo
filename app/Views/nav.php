@@ -24,7 +24,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Inicio</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Crud Usuarios</a>
-              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Crud Productos</a>
+              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Consultas</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Ventas</a>
             </ul>
@@ -33,8 +33,6 @@
                 <a> <?php echo "¡Bienvenido " . $nombre . "!" ?></a>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Mis compras</a></li>
-                <li><a class="dropdown-item" href="#">Carrito</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerrar sesión</a></li>
               </ul>
             </div>

@@ -18,12 +18,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="assets/js/bootstrap.bundle.js"></script>
   <!-- link logo barra de navegacion -->
-  <link rel="icon" href="assets\img\gamershoplogo.png" type="image/png">
+  <link rel="icon" href="<?php echo base_url('/')?>assets/img/gamershoplogo.png" type="image/png">
 
   <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
-  <link rel="stylesheet" href="assets/css">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="<?php echo base_url('/')?>assets/css">
+  <link rel="stylesheet" href="<?php echo base_url('/')?>assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('/')?>assets/css/styles.css">
 </head>
 
-</html>

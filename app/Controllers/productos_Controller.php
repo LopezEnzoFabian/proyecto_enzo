@@ -123,7 +123,48 @@ class productos_Controller extends Controller
         return $this->response->redirect(base_url('eliminados'));
     }
     /* esta funcion nos va enviar a la vista para poder editar un producto singleProducto */
-   
-    
+
+    public function singleProducto($id = null)
+    {
+        $productoModel = new productos_Model();
+        $data['old'] = $productoModel->where('id_producto', $id)->first();
+
+        $dato['titulo'] = 'Crud_productos';
+        echo view('header', $dato);
+        echo view('nav');
+        echo view('back/productos/edit', $data);
+        echo view('footer');
+    }
     /* modificar  editar un producto*/
+    public function modificar($id)
+    {
+        $productoModel = new productos_Model();
+        $producto = $productoModel->where('id_producto', $id)->first();
+
+        if (empty($producto)) {
+            session()->setFlashdata('warning', '¡El producto no existe!');
+            return redirect()->to(base_url('editar/' . $id));
+        }
+
+        if ($this->request->getVar('id_categoria') == 0) {
+            session()->setFlashdata('warning', '¡Ingrese una categoría válida!');
+            return redirect()->to(base_url('editar/' . $id));
+        } elseif ($this->request->getVar('precio') < 0 || $this->request->getVar('precio_vta') < 0) {
+            session()->setFlashdata('warning-2', '¡Ingrese un precio mayor a 0!');
+            return redirect()->to(base_url('editar/' . $id));
+        }
+
+        $data = [
+            'nombre_prod'  => $this->request->getVar('nombre_prod'),
+            'id_categoria' => $this->request->getVar('id_categoria'),
+            'precio'       => $this->request->getVar('precio'),
+            'precio_vta'   => $this->request->getVar('precio_vta'),
+            'stock'        => $this->request->getVar('stock'),
+            'stock_min'    => $this->request->getVar('stock_min'),
+        ];
+
+        $productoModel->update($id, $data);
+
+        return redirect()->to(base_url('agregar'));
+    }
 }

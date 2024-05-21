@@ -10,7 +10,7 @@
     <nav class="container navbar navbar-expand-lg bg-dark">
       <div class="container bg-dark">
         <a href="<?php echo base_url('/'); ?>">
-          <img src="assets/img/gamershoplogo.png" class="d-block w-20 header-logo" alt="Logo del header">
+          <img src="<?php echo base_url('/'); ?>assets/img/gamershoplogo.png" class="d-block w-20 header-logo" alt="Logo del header">
         </a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

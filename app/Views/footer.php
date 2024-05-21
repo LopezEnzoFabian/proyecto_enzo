@@ -53,7 +53,7 @@
         </ul>
         <div class="row justify-content-center">
           <div class="col-12 col-md-auto mb-3">
-            <img src="assets\img\gamershoplogo.png" class="img-fluid" width="100" alt="Logo de la página web">
+            <img src="<?php echo base_url('/'); ?>assets\img\gamershoplogo.png" class="img-fluid" width="100" alt="Logo de la página web">
           </div>
         </div>
         <p class="text-center navtext-colores">&copy; 2024 Company, Inc</p>

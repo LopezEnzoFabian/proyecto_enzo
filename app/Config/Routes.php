@@ -30,7 +30,7 @@ $routes->get('/crear', 'productos_Controller::index');
 $routes->get('/agregar', 'productos_Controller::index');
 $routes->get('/product-form', 'productos_Controller::creaProducto');
 $routes->post('/enviar-prod', 'productos_Controller::store');
-$routes->get('/editar/(:num)', 'productos_Controller::singleProducto/$1');
+$routes->get('editar/(:num)', 'productos_Controller::singleProducto/$1');
 $routes->post('modificar/(:num)', 'productos_Controller::modificar/$1');
 $routes->get('borrar/(:num)', 'productos_Controller::deletelogico/$1');
 $routes->get('borrar-definitivo/(:num)', 'productos_Controller::deleteproducto/$1');

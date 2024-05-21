@@ -1,9 +1,9 @@
 <section class="container mt-3 mb-3">
-    <h2>Productos</h2>
+    <h2>Productos eliminados</h2>
+
     <div class="d-flex justify-content-end">
-        <a href="<?php echo base_url('secciones') ?>" class="btn btn-dark btn-sm m-2">Secciones</a>
-        <a href="<?php echo base_url('product-form') ?>" class="btn btn-success btn-sm m-2 ">Agregar</a>
-        <a href="<?php echo base_url('eliminados') ?>" class="btn  btn-danger btn-sm m-2">Eliminados</a>
+        <a href="<?php echo base_url('crear') ?>" class="btn btn-dark btn-sm m-2">Agregados</a>
+        <!-- <a href="<?php echo base_url('eliminados') ?>" class="btn-danger btn-sm m-2 btn-opciones">Eliminados</a> -->
     </div>
 
     <?php
@@ -14,8 +14,7 @@
 
     <div class="mt-3">
         <div class="">
-            <table class="table table-success table-striped">
-            <!-- <table class="table table-striped row-border" id="users-list" style="width:100%"> -->
+            <table class="table table-success table-striped" id="users-list">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -28,13 +27,13 @@
                     </tr>
                 </thead>
 
-                <tbody class="">
-                    <?php if ($producto): ?>
-                        <?php foreach ($producto as $prod): ?>
-                            <?php $eliminado = $prod['eliminado']; ?> 
-                            <?php if ($eliminado == 'NO'): ?> 
+                <tbody>
+                    <?php if ($producto) : ?>
+                        <?php foreach ($producto as $prod) : ?>
 
-                                <tr class="">
+                            <?php if ($prod['eliminado'] == 'SI') : ?>
+
+                                <tr>
                                     <td><?php echo $prod['id_producto']; ?></td>
                                     <td><?php echo $prod['nombre_prod']; ?></td>
                                     <td><?php echo "$" . $prod['precio']; ?></td>
@@ -45,14 +44,15 @@
                                     <?php $id = $prod['id_producto']; ?>
 
                                     <td><img height="70px" width="85px" src="<?= base_url() ?>/assets/descargas/<?= $imagen ?>" alt="imagen-producto" style="object-fit: contain;"></td>
-                                    
+
                                     <td>
-                                        <a href="<?php print base_url('editar' .$prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1" style="margin-right: 10px;">Editar</a>
-                                        <a href="<?php echo base_url('borrar/' .$prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1">Borrar</a>
+                                        <a href="<?php echo base_url('activar/' . $prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1" style="margin-right: 10px;">Activar</a>
+                                        <a href="<?php echo base_url('borrar-definitivo/' . $prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1">Borrar definitivo</a>
                                     </td>
                                 </tr>
 
                             <?php endif ?>
+
                         <?php endforeach ?>
                     <?php endif ?>
 

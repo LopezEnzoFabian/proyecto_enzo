@@ -53,10 +53,9 @@
                     <div class="form-floating mb-3">
                         <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_categoria">
                             <option selected disabled>Selecciona una categoría</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="1">1-Monitores</option>
+                            <option value="2">2-Periféricos</option>
+                            <option value="3">3-Silla Gamer</option>                      
                         </select>
                         <label for="floatingSelect">Categoría</label>
                         <!-- ERROR -->

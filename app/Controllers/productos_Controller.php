@@ -24,6 +24,7 @@ class productos_Controller extends Controller
         echo view('back/productos/productos_view', $data);
         echo view('footer');
     }
+    /* creaProducto se utiliza para dirigirnos a la vistas de crud de productos */
     public function creaProducto()
     {
         $productoModel = new productos_Model();
@@ -35,15 +36,16 @@ class productos_Controller extends Controller
         echo view('back/productos/alta_productos_view', $data);
         echo view('footer');
     }
+    /* store insercion de elementos en el registro de un nuevo producto */
     public function store()
     {
         $input = $this->validate([
             'nombre_prod'     => 'required|min_length[2]',
             'id_categoria'    => 'is_not_unique[categoria.id_categoria]',
-            'precio'          => 'required',
-            'precio_vta'      => 'required',
-            'stock'           => 'required',
-            'stock_min'       => 'required',
+            'precio'          => 'required|numeric',
+            'precio_vta'      => 'required|numeric',
+            'stock'           => 'required|numeric',
+            'stock_min'       => 'required|numeric',
             'imagen'          => 'mime_in[imagen,image/jpg,image/jpeg,image/png,image/webp,image/ico]'
         ]);
         $productoModel = new productos_Model();
@@ -82,4 +84,46 @@ class productos_Controller extends Controller
             return $this->response->redirect(base_url('crear'));
         }
     }
+    /* delete logico borra de la tabla de crud de productos */
+    public function deletelogico($id = null)
+    {
+        $ProductoModel = new productos_Model();
+
+        $data['eliminado'] = $ProductoModel->where('id_producto', $id)->first();
+        $data['eliminado'] = 'SI';
+        $ProductoModel->update($id, $data);
+        return $this->response->redirect(base_url('crear'));
+    }
+    /* eliminados veremos la vista de eliminados por la funcion anterior */
+    public function eliminados()
+    {
+        $productoModel = new productos_Model();
+        $data['producto'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+
+        $dato['titulo'] = 'Crud_productos';
+        echo view('header', $dato);
+        echo view('nav');
+        echo view('back/productos/producto_eliminado', $data);
+        echo view('footer');
+    }
+    /* delete producto borrará un producto almacenado con la función anterior */
+    public function deleteproducto($id = null)
+    {
+        $productoModel = new productos_Model();
+        $data['producto'] = $productoModel->where('id_producto', $id)->delete($id);
+        return $this->response->redirect(base_url('eliminados'));
+    }
+    /* activar producto podremos volver a insertar la tabla borrada con esta funcion */
+    public function activarproducto($id = null)
+    {
+        $ProductoModel = new productos_Model();
+        $data['eliminado'] = $ProductoModel->where('id_producto', $id)->first();
+        $data['eliminado'] = 'NO';
+        $ProductoModel->update($id, $data);
+        return $this->response->redirect(base_url('eliminados'));
+    }
+    /* esta funcion nos va enviar a la vista para poder editar un producto singleProducto */
+   
+    
+    /* modificar  editar un producto*/
 }

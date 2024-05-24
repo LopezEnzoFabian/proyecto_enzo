@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Inicio</a>
-              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Crud Usuarios</a>
+              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('usuarios'); ?>">Crud Usuarios</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Consultas</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Ventas</a>

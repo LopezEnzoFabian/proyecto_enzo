@@ -25,7 +25,7 @@ $routes->get('login', 'login_controller');
 $routes->post('enviarlogin', 'login_controller::auth');
 $routes->get('logout', 'login_controller::logout');
 
-/* RUTAS DE PRODUCTO */
+/* RUTAS PARA CRUD DE  PRODUCTO */
 $routes->get('/crear', 'productos_Controller::index');
 $routes->get('/agregar', 'productos_Controller::index');
 $routes->get('/product-form', 'productos_Controller::creaProducto');
@@ -36,3 +36,10 @@ $routes->get('borrar/(:num)', 'productos_Controller::deletelogico/$1');
 $routes->get('borrar-definitivo/(:num)', 'productos_Controller::deleteproducto/$1');
 $routes->get('/eliminados', 'productos_Controller::eliminados');
 $routes->get('activar/(:num)', 'productos_Controller::activarproducto/$1');
+
+/* RUTAS PARA CRUD USUARIOS */
+$routes->get('/usuarios', 'usuario_crud_controller::principal');
+$routes->get('/borrar-usuario/(:num)','usuario_crud_controller::deletelogico/$1');
+$routes->get('/dadosbaja','usuario_crud_controller::eliminados');
+$routes->get('/activar-usuario/(:num)','usuario_crud_controller::activarlogico/$1');
+$routes->get('/bdusuario/(:num)','usuario_crud_controller::activarlogico/$1');

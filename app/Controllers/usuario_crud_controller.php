@@ -35,6 +35,52 @@ class usuario_crud_controller extends Controller
     }
 
     // insert data
+   
+
+    /* nos permite ver la vista usuario_eliminado_view con la tabla de eliminados */
+    public function eliminados()
+    {
+        $userModel = new usuario_model();
+        $data['users'] = $userModel->orderBy('id_usuario', 'DESC')->findAll();
+
+        $dato['titulo'] = 'Crud_usuarios';
+
+        echo view('header', $dato);
+        echo view('nav');
+        echo view('back/usuarios/usuario_eliminado_view', $data);
+        echo view('footer');
+    }
+
+
+    /* BORRA UN USUARIO */
+    public function delete($id = null)
+    {
+        $userModel = new usuario_model();
+        $data['nombre_usuario'] = $userModel->where('id_usuario', $id)->delete($id);
+        return $this->response->redirect(site_url('users-list'));
+    }
+    /* UN DELETE logico de un usuario "baja" el cual utilizamos para determinar si estara en la tabla de eliminados o de activos*/
+    public function deletelogico($id = null)
+    {
+        $userModel = new usuario_model();
+        $data['baja'] = $userModel->where('id_usuario', $id)->first();
+        $data['baja'] = 'SI';
+        $userModel->update($id, $data);
+        return $this->response->redirect(base_url('usuarios'));
+    }
+
+    /* DEVUELVE EL USUARIO ELIMINADO POR deletelogico a la tabla de usuarios activos */
+    public function activarlogico($id = null)
+    {
+        $userModel = new usuario_model();
+        $data['baja'] = $userModel->where('id_usuario', $id)->first();
+        $data['baja'] = 'NO';
+        $userModel->update($id, $data);
+        return $this->response->redirect(base_url('dadosbaja'));
+    }
+
+
+    
     public function store()
     {
         $input = $this->validate([
@@ -94,49 +140,5 @@ class usuario_crud_controller extends Controller
         ];
         $userModel->update($id, $data);
         return $this->response->redirect(site_url('users-list'));
-    }
-
-    /* nos permite ver la vista usuario_eliminado_view con la tabla de eliminados */
-    public function eliminados()
-    {
-        $userModel = new usuario_model();
-        $data['users'] = $userModel->orderBy('id_usuario', 'DESC')->findAll();
-
-        $dato['titulo'] = 'Crud_usuarios';
-
-        echo view('header', $dato);
-        echo view('nav');
-        echo view('back/usuarios/usuario_eliminado_view', $data);
-        echo view('footer');
-    }
-
-
-
-
-    /* BORRA UN USUARIO */
-    public function delete($id = null)
-    {
-        $userModel = new usuario_model();
-        $data['nombre_usuario'] = $userModel->where('id_usuario', $id)->delete($id);
-        return $this->response->redirect(site_url('users-list'));
-    }
-    /* UN DELETE logico de un usuario "baja" el cual utilizamos para determinar si estara en la tabla de eliminados o de activos*/
-    public function deletelogico($id = null)
-    {
-        $userModel = new usuario_model();
-        $data['baja'] = $userModel->where('id_usuario', $id)->first();
-        $data['baja'] = 'SI';
-        $userModel->update($id, $data);
-        return $this->response->redirect(base_url('usuarios'));
-    }
-
-    /* DEVUELVE EL USUARIO ELIMINADO POR deletelogico a la tabla de usuarios activos */
-    public function activarlogico($id = null)
-    {
-        $userModel = new usuario_model();
-        $data['baja'] = $userModel->where('id_usuario', $id)->first();
-        $data['baja'] = 'NO';
-        $userModel->update($id, $data);
-        return $this->response->redirect(base_url('dadosbaja'));
     }
 }

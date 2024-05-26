@@ -39,10 +39,10 @@ class consultas_controller extends Controller
         echo view('footer');
     }
 
+
     public function registrar_consulta()
     {
-        $request = \Config\Services::request();
-        if ($request->getMethod(true)) {
+        if (!session()->logged_in) {
             $rules = [
                 'nombre' => 'required',
                 'apellido' => 'required',
@@ -50,27 +50,35 @@ class consultas_controller extends Controller
                 'telefono' => 'required',
                 'mensaje' => 'required'
             ];
-
-            $validations = $this->validate($rules);
-            if ($validations) {
-                $data = [
-                    'nombre' => $request->getPost('nombre'),
-                    'apellido' => $request->getPost('apellido'),
-                    'email' => $request->getPost('email'),
-                    'telefono' => $request->getPost('telefono'),
-                    'mensaje' => $request->getPost('mensaje')
-                ];
-                $userConsulta = new consulta_Model();
-                $userConsulta->insert($data);
-                return redirect()->to('contacto')->with('msg', 'Se registro tu consulta!.');
-            } else {
-                $data['validation'] = $this->validator;
+            if (!$this->validate($rules)) {
+                return redirect()->back()->withInput($data['validation'] = $this->validator);
             }
-            $data['titulo'] = 'contacto';
-            return view('header', $data) .
-                view('nav') .
-                view('contacto') .
-                view('footer');
+            $data = [
+                'nombre' => $this->request->getPost('nombre'),
+                'apellido' => $this->request->getPost('apellido'),
+                'email' => $this->request->getPost('email'),
+                'telefono' => $this->request->getPost('telefono'),
+                'mensaje' => $this->request->getPost('mensaje')
+            ];
+            $userConsulta = new consulta_Model();
+            $userConsulta->insert($data);
+            return redirect()->to('contacto')->with('msg', 'Se registro tu consulta!.');
         }
+        $rules = [
+            'mensaje' => 'required'
+        ];
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput($data['validation'] = $this->validator);
+        }
+        $data = [
+            'nombre' => session()->nombre,
+            'apellido' => session()->apellido,
+            'email' => session()->email,
+            'telefono' => session()->telefono,
+            'mensaje' => $this->request->getPost('mensaje')
+        ];
+        $userConsulta = new consulta_Model();
+        $userConsulta->insert($data);
+        return redirect()->to('contacto')->with('msg', 'Se registro tu consulta!.');
     }
 }

@@ -101,51 +101,58 @@
             </div>
         </div>
         <form action="<?php echo base_url('/consulta') ?>" method="post" class="p-3">
-            <!-- Nombre y Apellido -->
-            <div class="row mb-3">
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="nombre" class="col-form-label">Nombre</label>
+            <?php
+            /* SI NO ESTA LOGUEADO ENTONCES MOSTRAMOS EL FORMULARIO ENTERO */
+            if (!session()->logged_in) {
+            ?>
+                <!-- Nombre y Apellido -->
+                <div class="row mb-3">
+                    <div class="col-12 col-lg-6">
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-4">
+                                <label for="nombre" class="col-form-label">Nombre</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                            </div>
                         </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-4">
+                                <label for="apellido" class="col-form-label">Apellido</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="apellido" class="col-form-label">Apellido</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                <!-- MAIL -->
+                <div class="row mb-3">
+                    <div class="col-12 col-md-2">
+                        <label for="email" class="col-form-label">Email</label>
+                    </div>
+                    <div class="col-12 col-md-10">
+                        <input type="email" class="form-control" name="email" placeholder="nombre@email.com">
+                    </div>
+                </div>
+                <!-- telefono -->
+                <div class="row mb-3">
+                    <div class="col-12 col-lg-6">
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-4">
+                                <label for="telefono" class="col-form-label">Teléfono</label>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control" placeholder="+(54)" name="telefono">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- MAIL -->
-            <div class="row mb-3">
-                <div class="col-12 col-md-2">
-                    <label for="email" class="col-form-label">Email</label>
-                </div>
-                <div class="col-12 col-md-10">
-                    <input type="email" class="form-control" name="email" placeholder="nombre@email.com">
-                </div>
-            </div>
-            <!-- telefono -->
-            <div class="row mb-3">
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="telefono" class="col-form-label">Teléfono</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="+(54)" name="telefono">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php }
+            ?>
+            <!-- SE MUESTRA SOLAMENTE SI ESTA LOGUEADO -->
             <!-- AREA DE MENSAJE -->
             <div class="row mb-3">
                 <div class="col-12">

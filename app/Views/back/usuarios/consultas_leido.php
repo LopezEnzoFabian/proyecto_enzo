@@ -13,47 +13,45 @@
     ?>
 
     <div class="mt-3">
-        <div class="">
-            <table class="table table-success table-striped" id="users-list" style="margin: 18px 0;">
+        <table class="table table-success table-striped" id="users-list" style="margin: 18px 0;">
             <!-- <table class="table table-striped row-border" id="users-list" style="width:100%"> -->
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Email</th>
-                        <th>Telefono</th>
-                        <th>Mensaje</th>
-                        <th>Opciones</th>
-                    </tr>
-                </thead>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Mensaje</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
 
-                <tbody class="table-body">
-                    <?php if ($consulta): ?>
-                        <?php foreach ($consulta as $cons): ?>
-                            <?php $leido = $cons['leido']; ?> 
-                            <?php if ($leido == 'SI'): ?> 
+            <tbody class="table-body">
+                <?php if ($consulta) : ?>
+                    <?php foreach ($consulta as $cons) : ?>
+                        <?php $leido = $cons['leido']; ?>
+                        <?php if ($leido == 'SI') : ?>
 
-                                <tr class="table-row">
-                                    <td><?php echo $cons['id_consulta']; ?></td>
-                                    <td><?php echo $cons['nombre']; ?></td>
-                                    <td><?php echo $cons['apellido']; ?></td>
-                                    <td><?php echo $cons['email']; ?></td>
-                                    <td><?php echo $cons['telefono']; ?></td>
-                                    <td><?php echo $cons['mensaje']; ?></td>
-                                    
-                                    <td>
-                                        <a href="<?php echo base_url('borrarconsulta/' .$cons['id_consulta']); ?>" class="btn btn-danger btn-sm mt-1">Borrar</a>
-                                    </td>
-                                </tr>
+                            <tr class="table-row">
+                                <td><?php echo $cons['id_consulta']; ?></td>
+                                <td><?php echo $cons['nombre']; ?></td>
+                                <td><?php echo $cons['apellido']; ?></td>
+                                <td><?php echo $cons['email']; ?></td>
+                                <td><?php echo $cons['telefono']; ?></td>
+                                <td><?php echo $cons['mensaje']; ?></td>
 
-                            <?php endif ?>
-                        <?php endforeach ?>
-                    <?php endif ?>
+                                <td>
+                                    <a href="<?php echo base_url('borrarconsulta/' . $cons['id_consulta']); ?>" class="btn btn-danger btn-sm mt-1">Borrar</a>
+                                </td>
+                            </tr>
 
-                </tbody>
-            </table>
-        </div>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                <?php endif ?>
+
+            </tbody>
+        </table>
     </div>
 
 </section>

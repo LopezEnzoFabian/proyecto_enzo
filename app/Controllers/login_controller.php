@@ -47,6 +47,7 @@ class login_controller extends BaseController {
                         'nombre' => $data['nombre'],
                         'apellido' => $data['apellido'],
                         'email' =>  $data['email'],
+                        'telefono' => $data['telefono'],
                         'nombre_usuario' => $data['nombre_usuario'],
                         'id_perfil' => $data['id_perfil'],
                         'logged_in'  => TRUE

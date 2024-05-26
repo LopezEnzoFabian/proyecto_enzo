@@ -25,7 +25,7 @@
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Inicio</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('usuarios'); ?>">Crud Usuarios</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
-              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Consultas</a>
+              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/consulta_contactos'); ?>">Consultas</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Ventas</a>
             </ul>
             <div class="dropdown">

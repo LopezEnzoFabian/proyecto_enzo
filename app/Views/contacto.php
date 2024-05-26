@@ -1,3 +1,20 @@
+<?php helper('form') ?>
+<?php if (isset($validation)) { ?>
+    <div class="alert-danger">
+        <?= $validation->listErrors(); ?>
+    </div>
+<?php } ?>
+
+<div>
+    <?php if (session()->getFlashdata('msgc')) {
+        echo " <div class='h4 text-center alert alert-warning alert-dismissible' style='border-radius: 40px;'>
+              <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('msgc') . "
+           </div>";
+    }
+    ?>
+</div>
+
+
 <div class="container">
     <div class="row custom-row">
         <img src="assets\img\contactofondo.png" class="img-fluid">
@@ -83,7 +100,7 @@
                 <p class="fs-3">Contáctenos via correo</p>
             </div>
         </div>
-        <form class="p-3">
+        <form action="<?php echo base_url('/consulta') ?>" method="post" class="p-3">
             <!-- Nombre y Apellido -->
             <div class="row mb-3">
                 <div class="col-12 col-lg-6">
@@ -92,7 +109,7 @@
                             <label for="nombre" class="col-form-label">Nombre</label>
                         </div>
                         <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
                         </div>
                     </div>
                 </div>
@@ -102,30 +119,7 @@
                             <label for="apellido" class="col-form-label">Apellido</label>
                         </div>
                         <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Apellido" id="apellido">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ciudad telefono -->
-            <div class="row mb-3">
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="ciudad" class="col-form-label">Ciudad</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="Ciudad" id="ciudad">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-3">
-                        <div class="col-12 col-md-4">
-                            <label for="telefono" class="col-form-label">Teléfono</label>
-                        </div>
-                        <div class="col-12 col-md-8">
-                            <input type="text" class="form-control" placeholder="+(54)" id="telefono">
+                            <input type="text" class="form-control" placeholder="Apellido" name="apellido">
                         </div>
                     </div>
                 </div>
@@ -136,16 +130,29 @@
                     <label for="email" class="col-form-label">Email</label>
                 </div>
                 <div class="col-12 col-md-10">
-                    <input type="email" class="form-control" id="email" placeholder="nombre@email.com">
+                    <input type="email" class="form-control" name="email" placeholder="nombre@email.com">
+                </div>
+            </div>
+            <!-- telefono -->
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6">
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4">
+                            <label for="telefono" class="col-form-label">Teléfono</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" class="form-control" placeholder="+(54)" name="telefono">
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- AREA DE MENSAJE -->
             <div class="row mb-3">
                 <div class="col-12">
-                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <label for="mensaje" class="form-label">Dejanos tu consulta</label>
                 </div>
                 <div class="col-12">
-                    <textarea class="form-control" id="mensaje" rows="4"></textarea>
+                    <textarea class="form-control" name="mensaje" rows="4"></textarea>
                 </div>
             </div>
             <div class="row mb-3">

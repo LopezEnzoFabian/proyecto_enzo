@@ -43,3 +43,17 @@ $routes->get('/borrar-usuario/(:num)','usuario_crud_controller::deletelogico/$1'
 $routes->get('/dadosbaja','usuario_crud_controller::eliminados');
 $routes->get('/activar-usuario/(:num)','usuario_crud_controller::activarlogico/$1');
 $routes->get('/bdusuario/(:num)','usuario_crud_controller::activarlogico/$1');
+
+
+/* RUTA PARA CONSULTA */
+$routes->get('/consulta_contactos', 'consultas_controller::principal');
+$routes->get('/consulta_ya_leidos', 'consultas_controller::Leidos');
+
+$routes->get('/borrarconsulta/(:num)', 'consultas_controller::borrarConsulta/$1');
+$routes->post('/consulta', 'consultas_controller::registrar_consulta');
+
+
+$routes->get('/consulta_leido/(:num)', 'consultas_controller::leido/$1');
+$routes->get('/consulta_reply/(:num)', 'consultas_controller::reply/$1');
+$routes->post('/enviar_respuesta', 'consultas_controller::enviarRespuesta');
+

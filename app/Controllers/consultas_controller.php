@@ -81,4 +81,23 @@ class consultas_controller extends Controller
         $userConsulta->insert($data);
         return redirect()->to('contacto')->with('msg', 'Se registro tu consulta!.');
     }
+
+    public function leido($idConsulta)
+    {
+        $consultaModel = new consulta_Model();
+    
+        $data = [
+            'leido' => 'SI'
+        ];
+    
+        $consultaModel->update($idConsulta, $data);
+        return redirect()->to('/consulta_contactos'); // Redirige a la página de consultas leídas después de marcar como leída
+    }
+
+    public function borrarConsulta($idConsulta)
+    {
+        $consultaModel = new consulta_Model();
+        $consultaModel->delete($idConsulta);
+        return redirect()->to('/consulta_ya_leidos')->with('msgc', 'Consulta borrada exitosamente');
+    }
 }

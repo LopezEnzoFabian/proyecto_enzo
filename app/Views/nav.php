@@ -42,10 +42,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Catálogo</a>
-          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
-          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
+          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('muestro'); ?>">Carrito</a>
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('contacto'); ?>">Contacto</a>
-          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a>
         </ul>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,7 +51,6 @@
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Mis compras</a></li>
-            <li><a class="dropdown-item" href="#">Carrito</a></li>
             <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerra sesión</a></li>
           </ul>
         </div>

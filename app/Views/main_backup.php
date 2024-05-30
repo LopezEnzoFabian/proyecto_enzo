@@ -1,10 +1,9 @@
-<!-- MAIN/HOME carrusel,novedades,cards mas vendidos y pagina de inicio-->
 <?php
 if (isset($_SESSION['msg'])) {
     echo $_SESSION['msg'];
 }
 ?>
-
+<!-- MAIN/HOME carrusel,novedades,cards mas vendidos y pagina de inicio-->
 <body>
   <div style="position: absolute; top: 20%; z-index: 1; left: 50%; transform: translateX(-50%);">
     <!--recuperamos datos con la función Flashdata para mostrarlos-->
@@ -61,7 +60,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\monitor.png" class="img-fluid" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Monitor Curvo Samsung 24'' F390 Full HD FreeSync</p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>
@@ -72,7 +71,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\auriculares.png" class="img-fluid" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Auriculares Gamer Wesdar GH31 Black RGB RCA Y-Adapter</p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>
@@ -83,7 +82,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\sillagamer.png" class="img-fluid" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Silla Gamer AK-Racing Gaming Chair OCTANE Blue (Peso MAX. 150kg) </p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>
@@ -107,7 +106,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\jostick.png" class="card-img-top" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Joystick Xbox Inalambrico Robot White Bluetooth PC/XBOX</p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>
@@ -118,7 +117,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\teclado.png" class="card-img-top" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Teclado Gaming Retroiluminado Wesdar MK4 BR</p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>
@@ -129,7 +128,7 @@ if (isset($_SESSION['msg'])) {
               <img src="assets\img\mouse.png" class="card-img-top" alt="...">
             </h5>
             <p class="card-text" style="margin-bottom: 1;">Mouse Redragon Centrophorus M601 RGB</p>
-            <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+            <a href="login" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
           </div>
         </div>
       </div>

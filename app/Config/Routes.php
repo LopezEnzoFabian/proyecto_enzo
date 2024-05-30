@@ -48,12 +48,32 @@ $routes->get('/bdusuario/(:num)','usuario_crud_controller::activarlogico/$1');
 /* RUTA PARA CONSULTA */
 $routes->get('/consulta_contactos', 'consultas_controller::principal');
 $routes->get('/consulta_ya_leidos', 'consultas_controller::Leidos');
-
 $routes->get('/borrarconsulta/(:num)', 'consultas_controller::borrarConsulta/$1');
 $routes->post('/consulta', 'consultas_controller::registrar_consulta');
-
 
 $routes->get('/consulta_leido/(:num)', 'consultas_controller::leido/$1');
 $routes->get('/consulta_reply/(:num)', 'consultas_controller::reply/$1');
 $routes->post('/enviar_respuesta', 'consultas_controller::enviarRespuesta');
+
+/* RUTAS PARA CARRITO */
+
+//muestra todos los productos del catalogo
+$routes->get('/todos_p', 'carrito_controller::catalogo',['filter' => 'auth']);
+//carga la vista carrito_parte_view
+$routes->get('/muestro', 'carrito_controller::muestra',['filter' => 'auth']);
+//actualiza los datos del carrito
+$routes->get('/carrito_actualiza','carrito_controller::actualiza_carrito',['filter' => 'auth']);
+//agregar los items al carrito
+$routes->post('/carrito_agrega', 'carrito_controller::add',['filter' => 'auth']);
+//elimina un ítem seleccionado
+$routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1',['filter' => 'auth']);
+//eliminar todo el carrito
+$routes->get('/borrar','carrito_controller::borrar_carrito',['filter' => 'auth']);
+//muestra las compras una vez que realizamos la misma
+$routes->get('/carrito-comprar', 'Ventas_controller::comprarCarrito',['filter' => 'auth']);
+
+$routes->get('/ventas', 'Ventas_controller::ventas',['filter' => 'auth']);
+$routes->get('/factura/(:num)', 'Ventas_controller::factura/$1',['filter' => 'auth']);
+
+
 

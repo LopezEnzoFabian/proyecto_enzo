@@ -22,21 +22,6 @@ class usuario_crud_controller extends Controller
     }
 
 
-    public function create()
-    {
-        $userModel = new Usuarios_model();
-        $data['user_obj'] = $userModel->orderBy('id', 'DESC')->findAll();
-
-        $dato['titulo'] = 'Alta Usuario';
-        echo view('front/head_view', $dato);
-        echo view('front/nav_view');
-        echo view('back/usuario/usuario_crud_view', $data);
-        echo view('front/footer');
-    }
-
-    // insert data
-   
-
     /* nos permite ver la vista usuario_eliminado_view con la tabla de eliminados */
     public function eliminados()
     {

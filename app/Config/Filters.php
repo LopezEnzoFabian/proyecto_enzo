@@ -18,12 +18,21 @@ class Filters extends BaseConfig
      * @var array<string, class-string|list<class-string>> [filter_name => classname]
      *                                                     or [filter_name => [classname1, classname2, ...]]
      */
+
+    /* 
+     public array $aliases = [
+         'csrf'          => CSRF::class,
+         'toolbar'       => DebugToolbar::class,
+         'honeypot'      => Honeypot::class,
+         'invalidchars'  => InvalidChars::class,
+         'secureheaders' => SecureHeaders::class,
+     ];
+      */
     public array $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
+        'csrf'          => \CodeIgniter\Filters\CSRF::class,
+        'toolbar'       => \CodeIgniter\Filters\DebugToolbar::class,
+        'honeypot'      => \CodeIgniter\Filters\Honeypot::class,
+        'auth'          => \App\Filters\Auth::class,
     ];
 
     /**

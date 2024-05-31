@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2024 a las 19:27:49
+-- Tiempo de generación: 31-05-2024 a las 04:13:08
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -143,6 +143,33 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `ciudad`, `localidad
 (3, 'enzo', 'lopez', 'corrientes', 'corrientes capital', 'callefalsa123', 3400, 'ejemplo@gmail.com', '3494112233', 'chenzo', '$2y$10$GYerIbQcx7/bCPRDZbM1X.8amn0YTFgsRjPvKaxAhj90lj0giovnW', 2, 'NO'),
 (4, 'rodolfo', 'correa', 'corrientes', 'corrientes capital', 'callefalsa123', 3400, 'rodo@gmail.com', '3494112233', 'rodo', '$2y$10$gI1xKptIMj1rliqP.paaM.gB.dOeGN5toJBnbyqx/fv3LT/uQODBC', 1, 'NO');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas_detalle`
+--
+
+CREATE TABLE `ventas_detalle` (
+  `id_vta_detalle` int(11) NOT NULL,
+  `id_vta_cabe` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `venta_cabecera`
+--
+
+CREATE TABLE `venta_cabecera` (
+  `id_vta_cabe` int(11) NOT NULL,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp(),
+  `id_usuario` int(11) NOT NULL,
+  `total_venta` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -180,6 +207,21 @@ ALTER TABLE `usuarios`
   ADD KEY `id_perfil` (`id_perfil`);
 
 --
+-- Indices de la tabla `ventas_detalle`
+--
+ALTER TABLE `ventas_detalle`
+  ADD PRIMARY KEY (`id_vta_detalle`),
+  ADD KEY `id_vta_cabe` (`id_vta_cabe`),
+  ADD KEY `id_producto` (`id_producto`);
+
+--
+-- Indices de la tabla `venta_cabecera`
+--
+ALTER TABLE `venta_cabecera`
+  ADD PRIMARY KEY (`id_vta_cabe`),
+  ADD KEY `ventas_cabecera_ibfk_1` (`id_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -211,17 +253,48 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas_detalle`
+--
+ALTER TABLE `ventas_detalle`
+  MODIFY `id_vta_detalle` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `venta_cabecera`
+--
+ALTER TABLE `venta_cabecera`
+  MODIFY `id_vta_cabe` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`);
+
+--
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_perfil`) REFERENCES `perfiles` (`id_perfil`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `ventas_detalle`
+--
+ALTER TABLE `ventas_detalle`
+  ADD CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`id_vta_cabe`) REFERENCES `venta_cabecera` (`id_vta_cabe`),
+  ADD CONSTRAINT `ventas_detalle_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`);
+
+--
+-- Filtros para la tabla `venta_cabecera`
+--
+ALTER TABLE `venta_cabecera`
+  ADD CONSTRAINT `ventas_cabecera_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

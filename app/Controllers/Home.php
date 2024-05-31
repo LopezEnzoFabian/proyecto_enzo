@@ -1,14 +1,19 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\productos_Model;
 
 class Home extends BaseController
 {
     public function index()
     {
-        echo view('header');
+        $productoModel = new productos_Model();
+        $dato['producto'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+
+        $data ['titulo'] = 'inicio';
+        echo view('header', $data);
         echo view('nav');
-        echo view('main');
+        echo view('main', $dato);
         echo view('footer');
     }
 

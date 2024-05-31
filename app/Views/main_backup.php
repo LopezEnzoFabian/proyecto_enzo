@@ -136,3 +136,35 @@ if (isset($_SESSION['msg'])) {
   </div>
 
 </body>
+
+
+
+<div class="row">
+      <div class="col-md-3">
+        <img src="assets\img\gamer1.png" class="img-fluid d-img" alt="...">
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 fuente-textos">
+          <?php if ($producto) : ?>
+            <?php $contador = 0 ?>
+            <?php foreach ($producto as $prod) : ?>
+              <?php $imagen = $prod['imagen'] ?>
+              <?php if (($prod['eliminado'] != 'SI') && ($contador < 3)) : ?>
+
+                <div class="card-body d-flex flex-column justify-content-between" style="border: solid red;">
+                  <h5 class="card-title h-100" style="overflow: hidden;">
+                    <img src="<?= base_url() ?>/assets/descargas/<?= $imagen ?>" class="img-fluid" alt="imagen-producto">
+                  </h5>
+
+                  <p class="card-text" style="margin-bottom: 1;"> <?php echo $prod['nombre_prod'] ?> </p>
+
+                  <a href="#" class="btn boton-color" style="margin-top: auto;">Sumar al carrito</a>
+                </div>
+
+                <?php $contador++ ?>
+              <?php endif ?>
+            <?php endforeach ?>
+          <?php endif ?>
+        </div>
+      </div>
+    </div>

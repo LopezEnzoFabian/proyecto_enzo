@@ -20,18 +20,6 @@ class carrito_controller extends BaseController
         $cart->contents();
     }
 
-    public function catalogo()
-    {
-        $session=session();
-            $dato = array('titulo' => 'Todos los Productos');
-            $productoModel = new productos_Model();
-            $data['producto'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
-          
-         echo view('header', $dato);
-         echo view('nav');
-         echo view('back/carrito/productos_catalogo_view',$data);
-         echo view('footer');
-       }
 
     //muestro el carrito
     public function muestra()
@@ -60,6 +48,8 @@ class carrito_controller extends BaseController
         return redirect()->back()->withInput();
     }
 
+
+
     public function remove($rowid)
     {
         $cart = \Config\Services::Cart();
@@ -75,19 +65,20 @@ class carrito_controller extends BaseController
     }
 
       //Actualiza el carrito que se muestra
-  public function actualiza_carrito() {
-
-    $cart = \Config\Services::Cart();
-     
-    $request = \Config\Services::request();
+      public function actualiza_carrito() {
+        $cart = \Config\Services::cart();
+        $request = \Config\Services::request();
     
-    $cart->update(array(
-        'id'      => $request->getPost('id_producto'),
-        'qty'     =>  1,
-        'price'   => $request->getPost('precio_Vta'),
-        'name'    => $request->getPost('nombre_prod'),
-   
-    ));
-    return redirect()->back()->withInput();
-}
+        $items = $request->getPost('cart');
+    
+        foreach ($items as $item) {
+            $cart->update([
+                'rowid' => $item['rowid'],
+                'qty' => $item['qty'],
+            ]);
+        }
+    
+        return redirect()->back()->withInput();
+    
+    }
 }

@@ -57,7 +57,7 @@ if (isset($_SESSION['msg'])) {
   <!--ITEM NOVEDADES-->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3 portada">
+      <div class="col-md-3">
         <img src="assets/img/gamer1.png" class="img-fluid d-img" alt="...">
       </div>
 
@@ -103,7 +103,7 @@ if (isset($_SESSION['msg'])) {
                         </div>
                       <?php } else {
                         echo '<span> Sin stock </span>';
-                      }
+                     }
 
                       ?>
 

@@ -5,6 +5,10 @@ use App\Models\productos_Model;
 
 class Home extends BaseController
 {
+    public function __construct(){
+        helper(['url', 'form']);
+    }
+    
     public function index()
     {
         $productoModel = new productos_Model();

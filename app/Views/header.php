@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="<?php echo base_url('/'); ?>assets/js/bootstrap.bundle.js"></script>
   <!-- link logo barra de navegacion -->
   <link rel="icon" href="<?php echo base_url('/')?>assets/img/gamershoplogo.png" type="image/png">
 

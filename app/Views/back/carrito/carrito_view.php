@@ -42,12 +42,12 @@
                             <td><?php echo $item['qty']; ?></td>
                             <?php
                             $subtotal = $item['price'] * $item['qty'];
-                            $gran_total += $subtotal;
                             ?>
                             <td>$ <?php echo number_format($subtotal, 2); ?></td>
                         </tr>
                     <?php
                     }
+                    $gran_total += $subtotal;
                     ?>
                     <tr class="table-light">
                         <td colspan="4"><b>Total:</b></td>
@@ -56,9 +56,25 @@
                     <tr class="table-light">
                         <td colspan="5" align="right">
                             <!-- Botón para borrar carrito -->
-                            <input type="button" class="btn btn-danger btn-sm m-2" value="Borrar Carrito" onclick="window.location = 'borrar'">
+                            <input type="button" class="btn btn-danger btn-sm m-2" value="Borrar Carrito" onclick="window.location = 'Borrar'">
                             <!-- Botón para confirmar compra -->
-                            <input type="button" class="btn btn-success btn-sm m-2" value="Comprar" onclick="confirmarCompra()">
+                            <input type="button" class="btn btn-success btn-sm m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Comprar" >
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">¿Desea confirmar su compra?</h1>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" class="btn boton-color" value="Aceptar" data-bs-dismiss="modal" onclick="window.location = 'carrito-comprar'"></input>
+                                            <button type="button" class="btn boton-color2">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>

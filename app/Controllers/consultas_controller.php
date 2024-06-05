@@ -6,7 +6,7 @@ use App\Models\Consulta_model;
 use CodeIgniter\Controller;
 use CodeIgniter\Email\Email;
 
-class consultas_controller extends Controller
+class consultas_controller extends BaseController
 {
 
     public function __construct()
@@ -44,11 +44,42 @@ class consultas_controller extends Controller
     {
         if (!session()->logged_in) {
             $rules = [
-                'nombre' => 'required',
-                'apellido' => 'required',
-                'email' => 'required|valid_email',
-                'telefono' => 'required',
-                'mensaje' => 'required'
+                'nombre' => [
+                    'rules' => 'required|max_length[50]',
+                    'errors' => [
+                        'required' => 'Tienes que ingresar un nombre',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'apellido' => [
+                    'rules' => 'required|max_length[50]',
+                    'errors' => [
+                        'required' => 'Tienes que ingresar un apellido',
+                        'max_length' => 'El apellido es muy largo',
+                    ]
+                ],
+                'email' => [
+                    'rules' => 'required|max_length[100]|valid_email|is_unique[usuarios.email]',
+                    'errors' => [
+                        'required' => 'Tienes que ingresar un email',
+                        'max_length' => 'El email es muy largo',
+                        'is_unique' => 'Este email ya existe',
+                    ]
+                ],
+                'telefono' => [
+                    'rules' => 'required|max_length[50]',
+                    'errors' => [
+                        'required' => 'Tienes que ingresar un numero de telefono',
+                        'max_length' => 'El telefono es muy largo',
+                    ]
+                ],
+                'mensaje' => [
+                    'rules' => 'required|max_length[500]',
+                    'errors' => [
+                        'required' => 'Tienes que ingresar tu mensaje',
+                        'max_length' => 'El mensaje es muy largo',
+                    ]
+                ],
             ];
             if (!$this->validate($rules)) {
                 return redirect()->back()->withInput($data['validation'] = $this->validator);
@@ -65,7 +96,13 @@ class consultas_controller extends Controller
             return redirect()->to('contacto')->with('msg', 'Se registro tu consulta!.');
         }
         $rules = [
-            'mensaje' => 'required'
+            'mensaje' => [
+                'rules' => 'required|max_length[500]',
+                'errors' => [
+                    'required' => 'Tienes que ingresar tu mensaje',
+                    'max_length' => 'El mensaje es muy largo',
+                ]
+            ],
         ];
         if (!$this->validate($rules)) {
             return redirect()->back()->withInput($data['validation'] = $this->validator);
@@ -85,11 +122,11 @@ class consultas_controller extends Controller
     public function leido($idConsulta)
     {
         $consultaModel = new consulta_Model();
-    
+
         $data = [
             'leido' => 'SI'
         ];
-    
+
         $consultaModel->update($idConsulta, $data);
         return redirect()->to('/consulta_contactos'); // Redirige a la página de consultas leídas después de marcar como leída
     }

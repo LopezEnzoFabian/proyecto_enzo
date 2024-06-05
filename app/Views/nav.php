@@ -6,7 +6,6 @@
   ?>
 
   <header class="container-fluid bg-dark">
-    <?php if ($perfil == '1') echo 'class="-"'; ?> >
     <nav class="container navbar navbar-expand-lg bg-dark">
       <div class="container bg-dark">
         <a href="<?php echo base_url('/'); ?>">
@@ -17,15 +16,13 @@
         </button>
         <!-- VIEW ADMIN -->
         <?php if ($perfil == '1') { ?>
-          <!--<div class="btn btn-info active btnUser btn-sm">
-            <a href="">ADMIN: <?php echo session('nombre'); ?></a>
-          </div> -->
+          <?php echo session('nombre'); ?>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('usuarios'); ?>">Crud Usuarios</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/consulta_contactos'); ?>">Consultas</a>
-              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('#'); ?>">Ventas</a>
+              <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('ventas'); ?>">Ventas</a>
             </ul>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +47,7 @@
             <a> <?php echo "¡Bienvenido " . $nombre . "!" ?></a>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Mis compras</a></li>
+            <li><a class="dropdown-item" href="<?php echo base_url('ventas'); ?>">Mis compras</a></li>
             <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerra sesión</a></li>
           </ul>
         </div>

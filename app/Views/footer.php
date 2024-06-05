@@ -7,34 +7,34 @@
         <div class="skills-container">
           <div class="flex skills">
             <div class="skills-slide">
-              <img src="assets\img\carrusel-sponsor\adata.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\amd.jpg" alt="">
-              <img src="assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\geforce.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\geil.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\hyperx.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\intel.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\logitech.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\reddragon.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\samsung.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\tforce.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.32 PM (1).jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.34 PM.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\adata.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\amd.jpg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\geforce.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\geil.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\hyperx.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\intel.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\logitech.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\reddragon.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\samsung.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\tforce.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.32 PM (1).jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.34 PM.jpeg" alt="">
             </div>
             <div class="skills-slide">
-              <img src="assets\img\carrusel-sponsor\adata.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\amd.jpg" alt="">
-              <img src="assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\geforce.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\geil.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\hyperx.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\intel.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\logitech.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\reddragon.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\samsung.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\tforce.jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.32 PM (1).jpeg" alt="">
-              <img src="assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.34 PM.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\adata.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\amd.jpg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\deepcool.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\geforce.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\geil.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\hyperx.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\intel.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\logitech.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\reddragon.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\samsung.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\tforce.jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.32 PM (1).jpeg" alt="">
+              <img src="<?php echo base_url('/'); ?>assets\img\carrusel-sponsor\WhatsApp Image 2024-04-19 at 11.05.34 PM.jpeg" alt="">
             </div>
           </div>
         </div>

@@ -26,34 +26,34 @@ $routes->post('enviarlogin', 'login_controller::auth');
 $routes->get('logout', 'login_controller::logout');
 
 /* RUTAS PARA CRUD DE  PRODUCTO */
-$routes->get('/crear', 'productos_Controller::index');
-$routes->get('/agregar', 'productos_Controller::index');
-$routes->get('/product-form', 'productos_Controller::creaProducto');
-$routes->post('/enviar-prod', 'productos_Controller::store');
-$routes->get('/editar/(:num)', 'productos_Controller::singleProducto/$1');
-$routes->post('modificar/(:num)', 'productos_Controller::modificar/$1');
-$routes->get('borrar/(:num)', 'productos_Controller::deletelogico/$1');
-$routes->get('borrar-definitivo/(:num)', 'productos_Controller::deleteproducto/$1');
-$routes->get('/eliminados', 'productos_Controller::eliminados');
-$routes->get('activar/(:num)', 'productos_Controller::activarproducto/$1');
+$routes->get('/crear', 'productos_Controller::index',['filter' => 'auth']);
+$routes->get('/agregar', 'productos_Controller::index',['filter' => 'auth']);
+$routes->get('/product-form', 'productos_Controller::creaProducto',['filter' => 'auth']);
+$routes->post('/enviar-prod', 'productos_Controller::store',['filter' => 'auth']);
+$routes->get('/editar/(:num)', 'productos_Controller::singleProducto/$1',['filter' => 'auth']);
+$routes->post('modificar/(:num)', 'productos_Controller::modificar/$1',['filter' => 'auth']);
+$routes->get('borrar/(:num)', 'productos_Controller::deletelogico/$1',['filter' => 'auth']);
+$routes->get('borrar-definitivo/(:num)', 'productos_Controller::deleteproducto/$1',['filter' => 'auth']);
+$routes->get('/eliminados', 'productos_Controller::eliminados',['filter' => 'auth']);
+$routes->get('activar/(:num)', 'productos_Controller::activarproducto/$1',['filter' => 'auth']);
 
 /* RUTAS PARA CRUD USUARIOS */
-$routes->get('/usuarios', 'usuario_crud_controller::principal');
-$routes->get('/borrar-usuario/(:num)','usuario_crud_controller::deletelogico/$1');
-$routes->get('/dadosbaja','usuario_crud_controller::eliminados');
-$routes->get('/activar-usuario/(:num)','usuario_crud_controller::activarlogico/$1');
-$routes->get('/bdusuario/(:num)','usuario_crud_controller::activarlogico/$1');
+$routes->get('/usuarios', 'usuario_crud_controller::principal',['filter' => 'auth']);
+$routes->get('/borrar-usuario/(:num)','usuario_crud_controller::deletelogico/$1',['filter' => 'auth']);
+$routes->get('/dadosbaja','usuario_crud_controller::eliminados',['filter' => 'auth']);
+$routes->get('/activar-usuario/(:num)','usuario_crud_controller::activarlogico/$1',['filter' => 'auth']);
+$routes->get('/bdusuario/(:num)','usuario_crud_controller::activarlogico/$1',['filter' => 'auth']);
 
 
 /* RUTA PARA CONSULTA */
-$routes->get('/consulta_contactos', 'consultas_controller::principal');
-$routes->get('/consulta_ya_leidos', 'consultas_controller::Leidos');
-$routes->get('/borrarconsulta/(:num)', 'consultas_controller::borrarConsulta/$1');
+$routes->get('/consulta_contactos', 'consultas_controller::principal',['filter' => 'auth']);
+$routes->get('/consulta_ya_leidos', 'consultas_controller::Leidos',['filter' => 'auth']);
+$routes->get('/borrarconsulta/(:num)', 'consultas_controller::borrarConsulta/$1',['filter' => 'auth']);
 $routes->post('/consulta', 'consultas_controller::registrar_consulta');
 
-$routes->get('/consulta_leido/(:num)', 'consultas_controller::leido/$1');
-$routes->get('/consulta_reply/(:num)', 'consultas_controller::reply/$1');
-$routes->post('/enviar_respuesta', 'consultas_controller::enviarRespuesta');
+$routes->get('/consulta_leido/(:num)', 'consultas_controller::leido/$1',['filter' => 'auth']);
+$routes->get('/consulta_reply/(:num)', 'consultas_controller::reply/$1',['filter' => 'auth']);
+$routes->post('/enviar_respuesta', 'consultas_controller::enviarRespuesta',['filter' => 'auth']);
 
 /* RUTAS PARA CARRITO */
 
@@ -72,7 +72,7 @@ $routes->get('/borrar','carrito_controller::borrar_carrito',['filter' => 'auth']
 //muestra las compras una vez que realizamos la misma
 $routes->get('/carrito-comprar', 'Ventas_controller::comprarCarrito',['filter' => 'auth']);
 
-$routes->get('/ventas', 'Ventas_controller::ventas',['filter' => 'auth']);
+$routes->get('/ventas', 'ventas_controller::ventas',['filter' => 'auth']);
 $routes->get('/factura/(:num)', 'Ventas_controller::factura/$1',['filter' => 'auth']);
 
 

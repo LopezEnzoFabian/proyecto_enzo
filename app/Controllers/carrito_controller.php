@@ -64,21 +64,32 @@ class carrito_controller extends BaseController
         return redirect()->back()->withInput();
     }
 
-      //Actualiza el carrito que se muestra
-      public function actualiza_carrito() {
+    //Actualiza el carrito que se muestra
+    public function actualiza_carrito()
+    {
         $cart = \Config\Services::cart();
         $request = \Config\Services::request();
-    
+
         $items = $request->getPost('cart');
-    
+
         foreach ($items as $item) {
             $cart->update([
                 'rowid' => $item['rowid'],
                 'qty' => $item['qty'],
             ]);
         }
-    
+
         return redirect()->back()->withInput();
-    
     }
+
+
+    public function borrar_carrito()
+    {
+        $cart = \Config\Services::cart(); //para que incluya el $cart
+        $cart->destroy();
+
+        return redirect()->to(base_url('muestro'));
+    }
+
+    
 }

@@ -35,7 +35,50 @@
   margin-right: 50px;
 }
 
+.iconos-nav {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;/* Espacio entre la imagen y el texto */
+  margin-top: 10px;
+}
 
+/* Estilos para los elementos de la lista desplegable */
+.dropdown-menu {
+  background-color: #680404; /* Cambia el color de fondo del menú desplegable */
+  border: 1px solid rgba(3, 3, 3, 0.945); /* Agrega un borde alrededor del menú */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Agrega una sombra al menú desplegable */
+}
+
+.dropdown-menu a.dropdown-item {
+  color: #f3f3f3; /* Cambia el color del texto de los elementos de la lista */
+  padding: 0.5rem 1rem; /* Ajusta el relleno de los elementos de la lista */
+}
+
+.dropdown-menu a.dropdown-item:hover {
+  background-color: #cf5e5e; /* Cambia el color de fondo al pasar el cursor sobre los elementos de la lista */
+}
+
+.dropdown-menu li a.dropdown-item {
+  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.dropdown-menu img {
+  margin-right: 5px; /* Ajusta el margen a la derecha de la imagen para separarla del texto */
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown img {
+  margin-right: 5px; /* Ajusta el margen a la derecha de la imagen para separarla del texto */
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 20px;
+  height: 20px;
+}
 
 /* **************************************************************MAIN************************************************************ */
 
@@ -48,6 +91,10 @@
 .boton-color {
   background-color: #680404;/* Cambia este color al que desees */
   color: #ece9e9;/* Color del texto */
+  border: 1px solid transparent; /* Agrega un borde transparente */
+  padding: 0.375rem 0.75rem; /* Ajusta el relleno del botón */
+  border-radius: 0.25rem; /* Agrega bordes redondeados */
+  transition: background-color 0.2s ease-in-out; /* Agrega una transición suave */
 }
 /*MAIN STYLES BOTONES*/
 .boton-color:hover {

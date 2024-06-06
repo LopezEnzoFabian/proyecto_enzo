@@ -9,7 +9,7 @@
     
     <?php if (!empty($ventaDetalle)): ?>
         <div class="mt-3">
-            <div class="table-light">
+            <div class="table-responsive table-light">
                 <table class="table table-bordered table-hover table-striped ml-3" >
                     <thead>
                         <tr>

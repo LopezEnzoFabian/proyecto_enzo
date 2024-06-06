@@ -16,17 +16,23 @@
         </button>
         <!-- VIEW ADMIN -->
         <?php if ($perfil == '1') { ?>
-          <?php echo session('nombre'); ?>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/usuario.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('usuarios'); ?>">Crud Usuarios</a>
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/caja.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/chat.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/consulta_contactos'); ?>">Consultas</a>
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/monedas.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('ventas'); ?>">Ventas</a>
             </ul>
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <a> <?php echo "¡Bienvenido " . $nombre . "!" ?></a>
+              <button class="boton-color dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <a>
+                  <img src="<?php echo base_url('/'); ?>assets/img/iconos/sonrisa.png">
+                  <?php echo "¡Bienvenido " . $nombre . "!" ?>
+                </a>
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerrar sesión</a></li>
@@ -38,17 +44,31 @@
       <!-- VIEW CLIENTES -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
+          <img src="<?php echo base_url('/'); ?>assets/img/iconos/tienda.png" class="d-block w-10 iconos-nav">
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Catálogo</a>
+          <img src="<?php echo base_url('/'); ?>assets/img/iconos/carrito.png" class="d-block w-10 iconos-nav">
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('muestro'); ?>">Carrito</a>
+          <img src="<?php echo base_url('/'); ?>assets/img/iconos/chat.png" class="d-block w-10 iconos-nav">
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('contacto'); ?>">Contacto</a>
         </ul>
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <a> <?php echo "¡Bienvenido " . $nombre . "!" ?></a>
+          <button class="boton-color dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <a>
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/sonrisa.png">
+              <?php echo "¡Bienvenido " . $nombre . "!" ?>
+            </a>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?php echo base_url('ventas'); ?>">Mis compras</a></li>
-            <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Cerra sesión</a></li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url('ventas'); ?>">
+                <img src="<?php echo base_url('/'); ?>assets/img/iconos/factura.png" class="iconos-nav">Mis compras
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url('logout'); ?>">
+                <img src="<?php echo base_url('/'); ?>assets/img/iconos/salir.png" class="iconos-nav">Cerra sesión
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -56,10 +76,15 @@
         <!-- VISTA NO LOGUADOS -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
+            <img src="<?php echo base_url('/'); ?>assets/img/iconos/home.png" class="d-block w-10 iconos-nav">
             <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Inicio</a>
+            <img src="<?php echo base_url('/'); ?>assets/img/iconos/quiensomos.png" class="d-block w-10 iconos-nav">
             <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a>
+            <img src="<?php echo base_url('/'); ?>assets/img/iconos/monedas.png" class="d-block w-10 iconos-nav">
             <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
+            <img src="<?php echo base_url('/'); ?>assets/img/iconos/chat.png" class="d-block w-10 iconos-nav">
             <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('contacto'); ?>">Contacto</a>
+            <img src="<?php echo base_url('/'); ?>assets/img/iconos/terminos.png" class="d-block w-10 iconos-nav">
             <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a>
           </ul>
           <div class="d-flex" role="search">

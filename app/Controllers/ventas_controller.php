@@ -12,27 +12,27 @@ class ventas_Controller extends BaseController
 
     public function comprarCarrito()
     {
-        $idSession = session();
+        $ventaCabecera = new venta_cabecera_Model();
+        $ventaDetalle = new ventas_detalle_Model();
+        $productModel = new productos_Model();
+
         $cart = \Config\Services::cart();
         $productos = $cart->contents();
-        $montoTotal = 0;
+
         $excedeStock = false; // Variable para verificar si se excede el stock
         $nombreProducto = '';
+        $montoTotal = 0;
+        $idSession = intval(session()->id_usuario);
+        $fechaActual = date('Y-m-d'); // Obtener la fecha actual en el formato deseado
         //dd($productos);
+        $idCabecera = $ventaCabecera->insert([
+            "total_venta" => $montoTotal,
+            "id_usuario" => $idSession,
+            "fecha" => $fechaActual // Agregar la fecha actual al array de datos
+        ]);
         foreach ($productos as $producto) {
             $montoTotal += $producto["price"] * $producto["qty"];
 
-            $ventaCabecera = new venta_cabecera_Model();
-            $idSession = intval(session()->id_usuario);
-            $fechaActual = date('Y-m-d'); // Obtener la fecha actual en el formato deseado
-            $idCabecera = $ventaCabecera->insert([
-                "total_venta" => $montoTotal,
-                "id_usuario" => $idSession,
-                "fecha" => $fechaActual // Agregar la fecha actual al array de datos
-            ]);
-
-            $ventaDetalle = new ventas_detalle_Model();
-            $productModel = new productos_Model();
             $productStock = $productModel->find($producto["id"]); // Obtener los detalles del producto
             $stock = $productStock["stock"]; // Obtener el stock del producto
 
@@ -52,6 +52,10 @@ class ventas_Controller extends BaseController
                 $nombreProducto = $productStock["nombre_prod"]; // Suponiendo que el nombre del producto se encuentra en el campo "nombre".
             }
         }
+        $ventaCabecera->update($idCabecera,[
+            "total_venta" => $montoTotal,
+        ]);
+
         if ($excedeStock) {
             $mensaje = "La cantidad seleccionada para el producto '$nombreProducto' supera el stock disponible.";
             session()->setFlashdata('mensaje_stock', $mensaje);
@@ -97,5 +101,4 @@ class ventas_Controller extends BaseController
         echo view('back/carrito/factura', $data);
         echo view('footer');
     }
-    
 }

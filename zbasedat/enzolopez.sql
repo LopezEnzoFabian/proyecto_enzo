@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-05-2024 a las 19:34:40
+-- Tiempo de generación: 05-06-2024 a las 19:35:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -62,7 +62,8 @@ CREATE TABLE `consulta` (
 --
 
 INSERT INTO `consulta` (`id_consulta`, `nombre`, `apellido`, `email`, `telefono`, `mensaje`, `leido`) VALUES
-(8, 'Javier', 'Gomez', 'javi@gmail.com', '3794112233', 'Hola, esto es una consulta.', 'SI');
+(8, 'Javier', 'Gomez', 'javi@gmail.com', '3794112233', 'Hola, esto es una consulta.', 'SI'),
+(10, 'enzo', 'lopez', 'ejemplo@gmail.com', '3494112233', 'esto  es una consulta de usuario', 'NO');
 
 -- --------------------------------------------------------
 
@@ -106,11 +107,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre_prod`, `imagen`, `id_categoria`, `precio`, `precio_vta`, `stock`, `stock_min`, `eliminado`) VALUES
-(12, 'Auriculares', '1717130226_6c9d4e87c5504745c8db.png', 2, 6000, 10000, 5, 1, 'NO'),
-(13, 'Mouse', '1717130252_95ab9b693a9666c13576.png', 2, 5000, 7000, 5, 1, 'NO'),
-(14, 'Jostick', '1717130285_d84cb31e79129d324d89.png', 2, 15000, 20000, 5, 1, 'NO'),
-(15, 'Monitor', '1717130310_8baddd257761e92e0cf9.png', 1, 50000, 70000, 5, 1, 'NO'),
-(16, 'Silla Gamer', '1717130341_38b9b0ec1ebd72a9640f.png', 3, 300000, 400000, 4, 1, 'NO');
+(27, 'Monitor ASUS', '1717552347_2c8a79f2556f7ac92f89.jpg', 1, 80000, 100000, 50, 10, 'NO'),
+(29, 'Monitor LG ', '1717552777_61924a122de5f1530073.jpg', 1, 100000, 140000, 50, 10, 'NO'),
+(30, 'Monitor Curvo Samsung', '1717552816_6786f50273976277f14f.jpg', 1, 120000, 185000, 50, 10, 'NO'),
+(31, 'Teclado Gaming Retroiluminado Wesdar MK4 BR', '1717552858_ebf6eb508ad9b1bff570.jpg', 2, 5000, 7000, 48, 10, 'NO'),
+(32, 'Teclado mecanico', '1717552899_ff3f976d817111aac2d2.jpg', 2, 5000, 10000, 48, 10, 'NO'),
+(33, 'Teclado mecanico RGB', '1717552928_de5548fcfacfc12f2af2.jpg', 2, 30000, 40000, 17, 10, 'NO');
 
 -- --------------------------------------------------------
 
@@ -218,7 +220,7 @@ ALTER TABLE `ventas_detalle`
 --
 ALTER TABLE `venta_cabecera`
   ADD PRIMARY KEY (`id_vta_cabe`),
-  ADD KEY `ventas_cabecera_ibfk_1` (`id_usuario`);
+  ADD KEY `venta_cabecera_ibfk_1` (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -234,7 +236,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `consulta`
 --
 ALTER TABLE `consulta`
-  MODIFY `id_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `perfiles`
@@ -246,7 +248,7 @@ ALTER TABLE `perfiles`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -258,13 +260,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `ventas_detalle`
 --
 ALTER TABLE `ventas_detalle`
-  MODIFY `id_vta_detalle` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vta_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `venta_cabecera`
 --
 ALTER TABLE `venta_cabecera`
-  MODIFY `id_vta_cabe` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vta_cabe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- Restricciones para tablas volcadas
@@ -293,7 +295,7 @@ ALTER TABLE `ventas_detalle`
 -- Filtros para la tabla `venta_cabecera`
 --
 ALTER TABLE `venta_cabecera`
-  ADD CONSTRAINT `ventas_cabecera_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
+  ADD CONSTRAINT `venta_cabecera_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

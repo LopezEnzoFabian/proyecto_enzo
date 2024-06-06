@@ -164,10 +164,12 @@ class Cart
 
         // Validate the product name. It can only be alpha-numeric, dashes, underscores, colons or periods.
         // Note: These can be user-specified by setting the $this->product_name_rules variable.
-        if ( $this->productNameSafe && ! preg_match('/^[' . $this->productNameRules . ']+$/i' . ( true ? 'u' : '' ), $items[ 'name' ]) ) {
+
+        /* ESTE IF NO PERMITE INGRESAR CARACTERES ESPECIALES DENTRO DE NOMBRE DE UN PRODUCTO */
+        /*if ( $this->productNameSafe && ! preg_match('/^[' . $this->productNameRules . ']+$/i' . ( true ? 'u' : '' ), $items[ 'name' ]) ) {
             log_message('error', 'An invalid name was submitted as the product name: ' . $items[ 'name' ] . ' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces');
             return false;
-        }
+        }*/
 
         // --------------------------------------------------------------------
 

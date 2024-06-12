@@ -25,8 +25,8 @@
                                 <td><?= $venta['id_vta_cabe'] ?></td>
                                 <td><?= "$" . $venta['total_venta'] ?></td>
                                 <td><?= $venta['fecha'] ?></td>
-                                <td>
-                                    <a <?php if ($perfil == '1') echo 'class="btn btn-dark"'; ?> href="<?= base_url('factura/' . $venta['id_vta_cabe']) ?>" class="btn btn-primary">Ver Factura</a>
+                                <td style="text-align: center;">
+                                    <a <?php if ($perfil == '1') echo 'class="btn boton-color btn-sm"'; ?> href="<?= base_url('factura/' . $venta['id_vta_cabe']) ?>" class="btn boton-color3">Ver Factura</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

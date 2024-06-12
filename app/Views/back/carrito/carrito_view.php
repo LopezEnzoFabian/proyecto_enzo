@@ -2,7 +2,7 @@
 
     <div class="carts">
         <div class="heading">
-            <h2 style="margin-bottom: 60px; border-color: #023e8a;">Productos en tu Carrito</h2>
+            <h2 style="margin-bottom: 60px;">Productos en tu Carrito</h2>
         </div>
 
         <div class="text" align="center">
@@ -53,6 +53,7 @@
                             <td> <?php echo $item['name']; ?> </td>
                             <td>$ <?php echo number_format($item['price'], 2); ?> </td>
                             <td> <?php echo $item['qty']; ?> </td>
+
                             <?php $total_parcial += ($item['price'] * $item['qty']); ?>
                             <td> $ <?php echo number_format($item['subtotal'], 2) ?> </td>
                         </tr>

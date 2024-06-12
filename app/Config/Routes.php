@@ -75,5 +75,8 @@ $routes->get('/carrito-comprar', 'Ventas_controller::comprarCarrito',['filter' =
 $routes->get('/ventas', 'ventas_controller::ventas',['filter' => 'auth']);
 $routes->get('/factura/(:num)', 'Ventas_controller::factura/$1',['filter' => 'auth']);
 
+$routes->get('/restar_carro', 'carrito_controller::restar_carrito');
+$routes->get('/sumar_carro', 'carrito_controller::sumar_carrito');
+
 
 

@@ -2,7 +2,7 @@
     <h2>Usuarios dados de baja</h2>
 
     <div class="d-flex justify-content-end">
-        <a href="<?php echo base_url('usuarios') ?>" class="btn btn-success">Activos</a>
+        <a href="<?php echo base_url('usuarios') ?>" class="btn boton-color btn-sm">Ver activos</a>
     </div>
 
     <?php
@@ -12,8 +12,8 @@
     ?>
 
     <div class="mt-3">
-        <div class="">
-            <table class="table table-success table-striped" id="users-list">
+        <div class="table-responsive table-light">
+            <table class="table table-bordered table-hover table-striped ml-3">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -39,9 +39,9 @@
                                     <td><?php echo $us['nombre_usuario']; ?></td>
 
                                     <?php $id = $us['id_usuario']; ?>
-                                    <td>
-                                        <a href="<?php echo base_url('activar-usuario/' .$us['id_usuario']); ?>" class="btn btn-primary btn-sm mt-1" style="margin-right: 10px;">Activar</a>
-                                        <a href="<?php echo base_url('bdusuario/' .$us['id_usuario']); ?>" class="btn btn-danger btn-sm mt-1">Borrar definitivo</a>
+                                    <td style="text-align: center;">
+                                        <a href="<?php echo base_url('activar-usuario/' .$us['id_usuario']); ?>" class="btn boton-color3 btn-sm">Activar</a>
+                                        <a href="<?php echo base_url('bdusuario/' .$us['id_usuario']); ?>" class="btn boton-color2 btn-sm">Borrar definitivo</a>
                                     </td>
                                 </tr>
 

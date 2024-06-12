@@ -1,9 +1,9 @@
 <div class="row align-items-center justify-content-center fuente-textos">
     <div style="position: absolute; top: 5%; z-index: 1;">
-        <!--recuperamos datos con la función Flashdata para mostrarlos-->   
-        <?php if (session()->getFlashdata('warning')) {
+        <!--recuperamos datos con la función Flashdata para mostrarlos-->
+        <?php if (session()->getFlashdata('msg')) {
             echo " <div class='h4 text-center alert alert-danger alert-dismissible' style='border-radius: 40px;'>
-                  <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('warning') . "
+                  <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('msg') . "
                </div>";
         }
         ?>
@@ -16,10 +16,20 @@
             <div class="form-floating mb-3 mt-3">
                 <input type="email" class="form-control" name="email" placeholder="">
                 <label for="email">Email</label>
+                <?php if ($validation->getError('email')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('email'); ?>
+                    </div>
+                <?php } ?>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" name="pass" placeholder="">
                 <label for="pass">Contraseña</label>
+                <?php if ($validation->getError('pass')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('pass'); ?>
+                    </div>
+                <?php } ?>
             </div>
             <div class="container">
                 <button type="submit" class="btn boton-color">Entrar</button>

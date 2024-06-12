@@ -3,7 +3,7 @@
     <h2>Usuarios activos</h2>
 
     <div class="d-flex justify-content-end">
-        <a href="<?php echo base_url('dadosbaja') ?>" class="btn btn-dark btn-sm m-1">Bajas</a>
+        <a href="<?php echo base_url('dadosbaja') ?>" class="btn boton-color btn-sm">Ver bajas</a>
     </div>
 
     <?php
@@ -13,8 +13,8 @@
     ?>
 
     <div class="mt-3">
-        <div class="">
-            <table class="table table-success table-striped" id="users-list">
+        <div class="table-responsive table-light">
+            <table class="table table-bordered table-hover table-striped ml-3">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -41,8 +41,8 @@
 
                                     <?php $id = $us['id_usuario']; ?>
 
-                                    <td>
-                                        <a href="<?php echo base_url('borrar-usuario/' . $us['id_usuario']); ?>" class="btn btn-primary btn-sm mt-1">Dar de baja</a>
+                                    <td style="text-align: center;">
+                                        <a href="<?php echo base_url('borrar-usuario/' . $us['id_usuario']); ?>" class="btn boton-color3 btn-sm">Dar de baja</a>
                                     </td>
                                 </tr>
 

@@ -21,18 +21,80 @@ class usuario_controller extends Controller
     }
     public function formValidation()
     {
+
         $validationRules =
             [
-                'nombre' => 'required|min_length[3]',
-                'apellido' => 'required|min_length[3]|max_length[20]',
-                'ciudad' => 'required|min_length[3]|max_length[50]',
-                'localidad' => 'required|min_length[3]|max_length[50]',
-                'direccion' => 'required|min_length[3]|max_length[50]',
-                'codigo_postal' => 'required|min_length[3]|max_length[20]',
-                'email' => 'required|min_length[3]|max_length[100]|valid_email|is_unique[usuarios.email]',
-                'telefono' => 'required|min_length[3]|max_length[50]',
-                'nombre_usuario' => 'required|min_length[3]|max_length[50]',
-                'pass' => 'required|min_length[3]|max_length[50]'
+                 'nombre' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un nombre',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'apellido' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un apellido',
+                        'max_length' => 'El apellido es muy largo',
+                    ]
+                ],
+                'ciudad' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar tu ciudad',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'localidad' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar tu localidad',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'direccion' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar una dirección',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'codigo_postal' => [
+                    'rules' => 'required|max_length[50]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar tu código postal',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'email' => [
+                    'rules' => 'required|max_length[100]|valid_email|is_unique[usuarios.email]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un email',
+                        'max_length' => 'El email es muy largo',
+                        'is_unique' => 'Este email ya existe',
+                    ]
+                ],
+                'telefono' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un número de teléfono',
+                        'max_length' => 'El teléfono es muy largo',
+                    ]
+                ],
+                'nombre_usuario' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un nombre',
+                        'max_length' => 'El nombre es muy largo',
+                    ]
+                ],
+                'pass' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required' => 'Por favor ingresar un password',
+                        'max_length' => 'El password es muy largo',
+                    ]
+                ],
             ];
         $input = $this->validate($validationRules);
         $formModel = new usuario_model();

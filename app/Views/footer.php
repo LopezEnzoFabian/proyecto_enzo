@@ -1,3 +1,8 @@
+<?php
+  $session = session();
+  $perfil = $session->get('id_perfil');
+  ?>
+
 <footer class="container-fluid py-3 my-4">
   <!---CARUUSEL CON SPONSOR-->
   <div class="row">
@@ -41,10 +46,14 @@
   <!---PIE PAG-->
   <div class="row bg-black">
     <ul class="nav justify-content-center pb-3 mb-3">
-      <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('/'); ?>">Inicio</a></li>
+      <?php if (!session()->logged_in) { ?>
+        <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('/'); ?>">Inicio</a></li>
+      <?php } ?>
       <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('quienessomos'); ?>">Quienes Somos</a></li>
       <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a></li>
-      <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('contacto'); ?>">Contacto</a></li>
+      <?php if ($perfil !== '1') { ?>
+        <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('contacto'); ?>">Contacto</a></li>
+      <?php } ?>
       <li class="nav-item"><a class="nav-link navtext-colores" href="<?php echo base_url('terminosyusos'); ?>">Términos y Usos</a></li>
     </ul>
     <div class="row justify-content-center">
@@ -54,4 +63,5 @@
     </div>
     <p class="text-center navtext-colores">&copy; 2024 Company, Inc</p>
   </div>
+
 </footer>

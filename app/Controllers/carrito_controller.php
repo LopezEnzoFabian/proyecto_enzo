@@ -91,5 +91,44 @@ class carrito_controller extends BaseController
         return redirect()->to(base_url('muestro'));
     }
 
-    
+    public function restar_carrito()
+    {
+        $cart = \Config\Services::cart();
+        $itemId = $this->request->getGet("id");
+        $item = $cart->getItem($itemId);
+
+        // Verificar si el ítem existe en el carrito y si es un array
+        if ($item !== false && is_array($item)) {
+            $cantidad = $item["qty"];
+
+            if ($cantidad > 1) {
+                $cart->update(array(
+                    "rowid" => $itemId,
+                    "qty" => $cantidad - 1
+                ));
+            }
+        }
+
+        return redirect()->back()->withInput();
+    }
+
+    public function sumar_carrito()
+    {
+        $cart = \Config\Services::cart();
+        $itemId = $this->request->getGet("id");
+        $item = $cart->getItem($itemId);
+
+        // Verificar si el ítem existe en el carrito y si es un array
+        if ($item !== false && is_array($item)) {
+            $cantidad = $item["qty"];
+
+            if ($cantidad > 1) {
+                $cart->update(array(
+                    "rowid" => $itemId,
+                    "qty" => $cantidad + 1
+                ));
+            }
+        }
+        return redirect()->back()->withInput();
+    }
 }

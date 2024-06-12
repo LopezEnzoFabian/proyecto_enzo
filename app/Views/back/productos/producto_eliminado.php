@@ -2,7 +2,7 @@
     <h2>Productos eliminados</h2>
 
     <div class="d-flex justify-content-end">
-        <a href="<?php echo base_url('crear') ?>" class="btn btn-dark btn-sm m-2">Agregados</a>
+        <a href="<?php echo base_url('crear') ?>" class="btn boton-color2 btn-sm m-2">Agregados</a>
         <!-- <a href="<?php echo base_url('eliminados') ?>" class="btn-danger btn-sm m-2 btn-opciones">Eliminados</a> -->
     </div>
 
@@ -13,8 +13,8 @@
     ?>
 
     <div class="mt-3">
-        <div class="">
-            <table class="table table-success table-striped" id="users-list">
+        <div class="table-responsive table-light">
+            <table class="table table-bordered table-hover table-striped ml-3">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -43,11 +43,11 @@
                                     <?php $imagen = $prod['imagen']; ?>
                                     <?php $id = $prod['id_producto']; ?>
 
-                                    <td><img height="70px" width="85px" src="<?= base_url() ?>/assets/descargas/<?= $imagen ?>" alt="imagen-producto" style="object-fit: contain;"></td>
-
                                     <td>
-                                        <a href="<?php echo base_url('activar/' . $prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1" style="margin-right: 10px;">Activar</a>
-                                        <a href="<?php echo base_url('borrar-definitivo/' . $prod['id_producto']); ?>" class="btn btn-primary btn-sm mt-1">Borrar definitivo</a>
+                                        <img height="70px" width="85px" src="<?= base_url() ?>/assets/descargas/<?= $imagen ?>" alt="imagen-producto" style="object-fit: contain;">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a href="<?php echo base_url('activar/' . $prod['id_producto']); ?>" class="btn boton-color3 btn-sm mt-3">Activar</a>
                                     </td>
                                 </tr>
 

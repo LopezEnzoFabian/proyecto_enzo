@@ -76,7 +76,7 @@ class consultas_controller extends BaseController
                 'mensaje' => [
                     'rules' => 'required|max_length[500]',
                     'errors' => [
-                        'required' => 'Tienes que ingresar tu mensaje',
+                        'required' => 'Por favor ingresar tu mensaje',
                         'max_length' => 'El mensaje es muy largo',
                     ]
                 ],
@@ -99,7 +99,7 @@ class consultas_controller extends BaseController
             'mensaje' => [
                 'rules' => 'required|max_length[500]',
                 'errors' => [
-                    'required' => 'Tienes que ingresar tu mensaje',
+                    'required' => 'Por favor ingresar tu mensaje',
                     'max_length' => 'El mensaje es muy largo',
                 ]
             ],

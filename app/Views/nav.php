@@ -24,7 +24,7 @@
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/crear'); ?>">Crud Productos</a>
               <img src="<?php echo base_url('/'); ?>assets/img/iconos/chat.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/consulta_contactos'); ?>">Consultas</a>
-              <img src="<?php echo base_url('/'); ?>assets/img/iconos/monedas.png" class="d-block w-10 iconos-nav">
+              <img src="<?php echo base_url('/'); ?>assets/img/iconos/money.png" class="d-block w-10 iconos-nav">
               <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('ventas'); ?>">Ventas</a>
             </ul>
             <div class="dropdown">
@@ -45,7 +45,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-sm-0">
           <img src="<?php echo base_url('/'); ?>assets/img/iconos/tienda.png" class="d-block w-10 iconos-nav">
-          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Catálogo</a>
+          <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('/'); ?>">Productos</a>
           <img src="<?php echo base_url('/'); ?>assets/img/iconos/carrito.png" class="d-block w-10 iconos-nav">
           <a class="navbar-brand navtext-encabezado" href="<?php echo base_url('muestro'); ?>">Carrito</a>
           <img src="<?php echo base_url('/'); ?>assets/img/iconos/chat.png" class="d-block w-10 iconos-nav">
@@ -66,7 +66,7 @@
             </li>
             <li>
               <a class="dropdown-item" href="<?php echo base_url('logout'); ?>">
-                <img src="<?php echo base_url('/'); ?>assets/img/iconos/salir.png" class="iconos-nav">Cerra sesión
+                <img src="<?php echo base_url('/'); ?>assets/img/iconos/salir.png" class="iconos-nav">Cerrar sesión
               </a>
             </li>
           </ul>

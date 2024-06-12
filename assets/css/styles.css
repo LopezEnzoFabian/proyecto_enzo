@@ -17,6 +17,10 @@
 .boton-color2 {
   background-color:rgb(19, 18, 18);/* Cambia este color al que desees */
   color: #ffffff;/* Color del texto */
+  border: 1px solid transparent; /* Agrega un borde transparente */
+  padding: 0.375rem 0.75rem; /* Ajusta el relleno del botón */
+  border-radius: 0.25rem; /* Agrega bordes redondeados */
+  transition: background-color 0.2s ease-in-out; /* Agrega una transición suave */
 }
 /*NAV ENCABEZADO BOTONES*/
 .boton-color2:hover {
@@ -99,6 +103,20 @@
 /*MAIN STYLES BOTONES*/
 .boton-color:hover {
   background-color: #cf5e5e; /* Color de fondo cuando se pasa el cursor sobre el botón */
+  color: #ece9e9;
+}
+
+.boton-color3 {
+  background-color: #a71313;/* Cambia este color al que desees */
+  color: #f1f1f1;/* Color del texto */
+  border: 1px solid transparent; /* Agrega un borde transparente */
+  padding: 0.375rem 0.75rem; /* Ajusta el relleno del botón */
+  border-radius: 0.25rem; /* Agrega bordes redondeados */
+  transition: background-color 0.2s ease-in-out; /* Agrega una transición suave */
+}
+/*MAIN STYLES BOTONES*/
+.boton-color3:hover {
+  background-color: #680404; /* Color de fondo cuando se pasa el cursor sobre el botón */
   color: #ece9e9;
 }
 

@@ -27,6 +27,9 @@
 <div class="row align-items-center justify-content-center fuente-textos">
     <div class="col col-6 col-lg-6 mt-3 border border-4">
         <div class="row mt-2"><!-- TITULO REGISTRO -->
+            <div class="d-flex justify-content-end">
+                <a href="<?php echo base_url('crear') ?>" class="btn boton-color2 m-2">Atrás</a>
+            </div>
             <div class="container mb-3 text-center">
                 <h2 class="fs-4 text-center mt-3">Editar productos</h2>
             </div>

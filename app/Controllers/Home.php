@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\productos_Model;
+use App\Models\categorias_Model;
 
 class Home extends BaseController
 {
@@ -12,7 +13,9 @@ class Home extends BaseController
     public function index()
     {
         $productoModel = new productos_Model();
+        $categoriasModel = new categorias_Model();
         $dato['producto'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
+        $dato['categorias'] = $categoriasModel->orderBy('id_categoria', 'DESC')->findAll();
 
         $data ['titulo'] = 'inicio';
         echo view('header', $data);

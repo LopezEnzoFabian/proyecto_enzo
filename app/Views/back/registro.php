@@ -8,7 +8,7 @@
         }
         ?>
         <?php if (session()->getFlashdata('warning')) {
-            echo " <div class='h4 text-center alert alert-danger alert-dismissible' style='border-radius: 40px;'>
+            echo " <div class='h4 text-center form-text text-danger alert-dismissible' style='border-radius: 40px;'>
                   <button type='button' class='btn-close' data-bs-dismiss='alert' style='font-size:1.2rem; color: red;'></button>" . session()->getFlashdata('warning') . "
                </div>";
         }
@@ -30,7 +30,7 @@
                         <label for="nombre">Nombre</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('nombre')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('nombre'); ?>
                             </div>
                         <?php } ?>
@@ -42,7 +42,7 @@
                         <label for="apellido">Apellido</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('apellido')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('apellido'); ?>
                             </div>
                         <?php } ?>
@@ -56,7 +56,7 @@
                         <label for="ciudad">Ciudad</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('ciudad')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('ciudad'); ?>
                             </div>
                         <?php } ?>
@@ -68,7 +68,7 @@
                         <label for="localidad">Localidad</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('localidad')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('localidad'); ?>
                             </div>
                         <?php } ?>
@@ -82,7 +82,7 @@
                         <label for="direccion">Dirección</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('direccion')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('direccion'); ?>
                             </div>
                         <?php } ?>
@@ -94,7 +94,7 @@
                         <label for="codigo_postal">Código postal</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('codigo_postal')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('codigo_postal'); ?>
                             </div>
                         <?php } ?>
@@ -108,7 +108,7 @@
                         <label for="email">Email</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('email')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('email'); ?>
                             </div>
                         <?php } ?>
@@ -120,7 +120,7 @@
                         <label for="telefono">Teléfono</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('telefono')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('telefono'); ?>
                             </div>
                         <?php } ?>
@@ -134,7 +134,7 @@
                         <label for="nombre_usuario">Nombre de usuario</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('nombre_usuario')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('nombre_usuario'); ?>
                             </div>
                         <?php } ?>
@@ -146,7 +146,7 @@
                         <label for="pass">Password</label>
                         <!-- ERROR -->
                         <?php if ($validation->getError('pass')) { ?>
-                            <div class='alert alert-danger mt-2'>
+                            <div class='form-text text-danger mt-2'>
                                 <?= $error = $validation->getError('pass'); ?>
                             </div>
                         <?php } ?>
